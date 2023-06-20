@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "xstring": "cpp",
-        "vector": "cpp",
-        "string": "cpp",
-        "xlocale": "cpp",
-        "ios": "cpp"
-    }
-}
