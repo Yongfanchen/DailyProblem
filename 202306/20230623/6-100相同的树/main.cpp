@@ -32,24 +32,4 @@ class Solution {
       return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
   }
-  bool isSubtree(TreeNode *root, TreeNode *subRoot) {
-    stack<TreeNode *> stk;
-    while (root != nullptr) {
-      stk.emplace(root);
-      root = root->left;
-    }
-    while (!stk.empty()) {
-      TreeNode *t = stk.top();
-      if (isSameTree(t, subRoot)) {
-        return true;
-      }
-      stk.pop();
-      TreeNode *r = t->right;
-      while (r != nullptr) {
-        stk.emplace(r);
-        r = r->left;
-      }
-    }
-    return false;
-  }
 };
