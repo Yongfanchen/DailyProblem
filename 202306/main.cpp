@@ -102,6 +102,25 @@ void printPairs(const std::vector<std::pair<T, T>> &pairs)
     std::cout << "}" << std::endl;
 }
 
+vector<string> spiltStr(const string &s, char c)
+    {
+        vector<string> res;
+        string current;
+        for (char ch : s)
+        {
+            if (ch == c)
+            {
+                res.push_back(current);
+                current.clear();
+            }
+            else
+            {
+                current += ch;
+            }
+        }
+        res.push_back(current);
+        return res;
+    }
 int main()
 {
     std::vector<std::pair<int, int>> arr = {{1, 2}, {3, 5}};
