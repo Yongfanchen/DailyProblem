@@ -21,5 +21,14 @@
     <ClCompile Include="isSameTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="findRestaurant.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canPlaceFlowers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="averageOfLevels.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

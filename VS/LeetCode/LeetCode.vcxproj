@@ -123,6 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="averageOfLevels.cpp" />
+    <ClCompile Include="canPlaceFlowers.cpp" />
+    <ClCompile Include="findRestaurant.cpp" />
     <ClCompile Include="findTilt.cpp" />
     <ClCompile Include="isSameTree.cpp" />
   </ItemGroup>
