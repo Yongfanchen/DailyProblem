@@ -5,6 +5,7 @@
         "vector": "cpp",
         "unordered_set": "cpp",
         "xstring": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "set": "cpp"
     }
 }
