@@ -2,6 +2,7 @@
     "files.associations": {
         "unordered_map": "cpp",
         "xhash": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "unordered_set": "cpp"
     }
 }
