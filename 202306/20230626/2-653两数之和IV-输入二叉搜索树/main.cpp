@@ -22,7 +22,26 @@ struct TreeNode
 class Solution
 {
 public:
+    void inOrder(TreeNode *root, vector<int> &res)
+    {
+        if (root == nullptr)
+            return;
+        inOrder(root->left, res);
+        res.push_back(root->val);
+        inOrder(root->right, res);
+    }
     bool findTarget(TreeNode *root, int k)
     {
+        vector<int> res;
+        inOrder(root, res);
+        unordered_map<int, int> hashmap;
+        for (int i = 0; i < res.size(); i++)
+        {
+            auto it = hashmap.find(k - res[i]);
+            if (it != hashmap.end())
+                return true;
+            hashmap[res[i]] = i;
+        }
+        return false;
     }
 };

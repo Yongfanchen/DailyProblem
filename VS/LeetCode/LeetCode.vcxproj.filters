@@ -30,5 +30,8 @@
     <ClCompile Include="averageOfLevels.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="findMaxAverage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

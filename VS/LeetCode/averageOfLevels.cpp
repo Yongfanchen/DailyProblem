@@ -96,26 +96,86 @@ vector<vector<int>> levelOrder1(TreeNode *root)
 	}
 	return res;
 }
-//int main()
+//vector<int> midOrder(TreeNode *root)
 //{
-//	TreeNode* root = new TreeNode(3);
-//	root->left = new TreeNode(9);
-//	root->right = new TreeNode(20);
-//	root->right->left = new TreeNode(15);
-//	root->right->right = new TreeNode(7);
-//	vector<vector<int>> res = levelOrder1(root);
-//	vector<double> dres;
-//	for (auto &nums : res)
+//	vector<int> res;
+//	if (root == nullptr)
 //	{
-//		double sum = 0;
-//		for (auto &num : nums)
-//		{
-//			sum += (double)num;
-//		}
-//		dres.emplace_back(sum / nums.size());
+//		return res;
 //	}
-//
-//	return 0;
+//	midOrder(root->left);
+//	res.push_back(root->val);
+//	midOrder(root->right);
+//	return res;
 //}
+
+
+void inorder(TreeNode* root, vector<int>& res)
+{
+	if (root == nullptr)
+		return;
+	inorder(root->left, res);
+	res.push_back(root->val);
+	inorder(root->right, res);
+}
+
+
+vector<int> inOrderiter(TreeNode *root)
+{
+	vector<int> res;
+	stack<TreeNode*>stk;
+	while (root != nullptr || !stk.empty())
+	{
+		while (root != nullptr)
+		{
+			stk.emplace(root);
+			root = root->left;
+		}
+		root = stk.top();
+		stk.pop();
+		res.push_back(root->val);
+		root = root->right;
+	}
+	return res;
+}
+
+//二叉树的迭代算法
+vector<int> inorderIIItred(TreeNode* root)
+{
+	vector<int> res;
+	stack<TreeNode*> stk;
+	while (root!=nullptr)
+	{
+		stk.emplace(root);
+		root = root->left;
+	}
+	while (!stk.empty())
+	{
+		TreeNode *node = stk.top();
+		stk.pop();
+		res.push_back(node->val);
+		node = node->right;
+		while (node != nullptr)
+		{
+			stk.emplace(node);
+			node = node->left;
+		}
+	}
+	return res;
+}
+int main()
+{
+	TreeNode* root = new TreeNode(3);
+	root->left = new TreeNode(9);
+	root->right = new TreeNode(20);
+	root->right->left = new TreeNode(15);
+	root->right->right = new TreeNode(7);
+	vector<int> res2 = inOrderiter(root);
+	//vector<int> res;
+	//inorder(root, res);
+	//vector<int> res1 = res;
+
+	return 0;
+}
 
 

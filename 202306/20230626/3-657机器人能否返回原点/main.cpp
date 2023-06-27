@@ -10,7 +10,12 @@ using namespace std;
 class Solution
 {
 public:
+    // L R U D
     bool judgeCircle(string moves)
     {
+        unordered_map<char, int> hashmap;
+        for (auto &move : moves)
+            hashmap[move]++;
+        return hashmap['L'] == hashmap['R'] && hashmap['U'] == hashmap['D'];
     }
 };
