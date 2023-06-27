@@ -6,6 +6,10 @@
         "unordered_set": "cpp",
         "xstring": "cpp",
         "string": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp"
     }
 }
