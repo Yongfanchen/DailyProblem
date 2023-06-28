@@ -127,6 +127,7 @@
     <ClCompile Include="canPlaceFlowers.cpp" />
     <ClCompile Include="findMaxAverage.cpp" />
     <ClCompile Include="findRestaurant.cpp" />
+    <ClCompile Include="findShortestSubArray.cpp" />
     <ClCompile Include="findTilt.cpp" />
     <ClCompile Include="isSameTree.cpp" />
   </ItemGroup>

@@ -163,19 +163,19 @@ vector<int> inorderIIItred(TreeNode* root)
 	}
 	return res;
 }
-int main()
-{
-	TreeNode* root = new TreeNode(3);
-	root->left = new TreeNode(9);
-	root->right = new TreeNode(20);
-	root->right->left = new TreeNode(15);
-	root->right->right = new TreeNode(7);
-	vector<int> res2 = inOrderiter(root);
-	//vector<int> res;
-	//inorder(root, res);
-	//vector<int> res1 = res;
-
-	return 0;
-}
+//int main()
+//{
+//	TreeNode* root = new TreeNode(3);
+//	root->left = new TreeNode(9);
+//	root->right = new TreeNode(20);
+//	root->right->left = new TreeNode(15);
+//	root->right->right = new TreeNode(7);
+//	vector<int> res2 = inOrderiter(root);
+//	//vector<int> res;
+//	//inorder(root, res);
+//	//vector<int> res1 = res;
+//
+//	return 0;
+//}
 
 
