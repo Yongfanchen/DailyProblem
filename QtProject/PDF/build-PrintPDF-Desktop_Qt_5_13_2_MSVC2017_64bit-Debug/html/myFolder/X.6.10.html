@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传感器单元</title>
+</head>
+<body>
+    <p><center><h2>传感器单元</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.10_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.10_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>传感器(Sensor)单元的定义步骤（对应上图）</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“单元”图标；</p>
+    <p style="text-indent: 32px;">②点击“传感器单元”进入传感器单元定义窗口；</p>
+    <p style="text-indent: 32px;">③传感器类型设置为“时间传感器”；</p>
+    <p style="text-indent: 32px;">④时间阈值设置为“4”ms（根据实际单位制设置），目的是在4ms时触发传感器；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，生成时间传感器单元</p>
+ 
+
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当type=Sensor时，用于定义传感器单元（sensorPart）</strong></p>
+    <p style="text-indent: 32px;">第一行：1）传感器编号，2）传感器类型type，3）SBSFL</p>
+    <p style="text-indent: 32px;">当type=1：第二行：1）节点ID；2）自由度；3）ACC；4）ATIME</p>
+    <p style="text-indent: 32px;">当type=2：第二行：1）卷收器ID；2）PULRAT；3）PULTIM</p>
+    <p style="text-indent: 32px;">当type=3：第二行：1）TIME</p>
+    <p style="text-indent: 32px;">当type=4：第二行：1）节点1ID；2）节点2ID；3）DMX；4）DMN</p>
+    
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*element, type = sensor, part = sensorPart</p>
+    <p style="text-indent: 32px;">18, 3, 0</p>
+    <p style="text-indent: 32px;">4</p>
+ 
+
+</body>
+</html>

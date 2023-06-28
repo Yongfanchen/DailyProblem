@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集合</title>
+</head>
+<body>
+    <p><center><h2>集合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.THIRTEEN_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.THIRTEEN_2.png" /></center></td>
+            <td><center><img src="images/X.THIRTEEN_3.png" /></center></td>
+            <td><center><img src="images/X.THIRTEEN_4.png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>集合（Set）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“集合”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”集合；</p>
+    <p style="text-indent: 32px;">③设置集合“类型”及选择“范围”，可以采用“拾取”等方式进行目标的选择</p>
+    <p style="text-indent: 32px;">④“类型”下拉框中选择“<strong>节点</strong>”、“<strong>单元</strong>”或“<strong>零件</strong>”(“单元表面”和“单元边”不支持显式动力学)；</p>
+    <p style="text-indent: 32px;">⑤Shift+鼠标左键选择目标节点、单元或零件，相应目标高亮显式，可以利用鼠标滚轮键对模型视图进行缩放，提高目标的选取精度。</p>
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成集合的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*set:定义集合信息</strong></p>
+    <p ><strong>1.必须的属性设置：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Type</strong></p>
+    
+    <p style="text-indent: 48px;">当type=element时，表示该集合为单元集合。</p>
+    <p style="text-indent: 48px;">当type=node时，表示该集合为节点集合。</p>
+    <p style="text-indent: 48px;">当type=part时，表示该集合为部件的集合。</p>
+
+    <p style="text-indent: 32px;"><strong>Name</strong></p>
+    <p style="text-indent: 48px;">用于说明该集合的名字。</p>
+
+    <p ><strong>2.可选的属性设置：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Generate</strong></p>
+    
+    <p style="text-indent: 48px;">默认Generate=off。</p>
+    <p style="text-indent: 48px;">当Generate=on，表示该集合是按照增量方式生成的。</p>
+
+
+    <p ><strong>3.参数行</strong></p>
+
+    <p style="text-indent: 32px;">1.当无Generate属性，或者Generate=off时：</p>
+    <p style="text-indent: 32px;">重复列举集合中成员的id完成集合的定义。</p>
+    <p style="text-indent: 32px;">2.Generate=on时：</p>
+    <p style="text-indent: 32px;">第一行：</p>
+    <p style="text-indent: 32px;">当一行仅有两个数据时，表明从第一个数据以1为增量逐个增加到第二个数据；当一行有三个数据时，第三个数据即为增量值。</p>
+    <p style="text-indent: 32px;">重复完成集合的定义。</p>
+    <p style="text-indent: 32px;">3.当type=part时：</p>
+    <p style="text-indent: 32px;">第一行：1）部件名称。</p>
+    <p style="text-indent: 32px;">重复此行完成部件集合的定义。</p>
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*set, type = node, name = nset4</p>
+    <p style="text-indent: 32px;">1,2,3,4,5,6,7,8</p>
+    <p style="text-indent: 32px;">9,10</p>
+    <p style="text-indent: 32px;">*set, type = element, name = ELEMENT SET1</p>
+    <p style="text-indent: 32px;">1,2,3</p>
+    <p style="text-indent: 32px;">*set, type = part, name = PART SET1</p>
+
+    <p style="text-indent: 32px;">1,2</p>
+
+</body>
+</html>

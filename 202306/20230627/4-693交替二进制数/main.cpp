@@ -7,11 +7,14 @@
 #include <unordered_set>
 #include <vector>
 using namespace std;
-class Solution {
+class Solution
+{
 public:
-  string inttostringTwo(int n) {
+  string inttostringTwo(int n)
+  {
     string res;
-    while (n > 0) {
+    while (n > 0)
+    {
       if (n % 2 == 1)
         res += "1";
       else
@@ -21,28 +24,40 @@ public:
     reverse(res.begin(), res.end());
     return res;
   }
-  bool hasAlternatingBits(int n) {
+  bool hasAlternatingBits(int n)
+  {
     string res = inttostringTwo(n);
     std::cout << "res = " << res << endl;
     int size = res.length();
-    if (res[0] == '1') {
+    if (res[0] == '1')
+    {
       std::cout << "if (res[0] == '1')" << endl;
-      for (int i = 1; i < size; i++) {
-        if (i % 2 == 1) {
+      for (int i = 1; i < size; i++)
+      {
+        if (i % 2 == 1)
+        {
           if (res[i] == '1')
             return false;
-        } else {
+        }
+        else
+        {
           if (res[i] == '0')
             return false;
         }
       }
       return true;
-    } else {
-      for (int i = 1; i < size; i++) {
-        if (i % 2 == 1) {
+    }
+    else
+    {
+      for (int i = 1; i < size; i++)
+      {
+        if (i % 2 == 1)
+        {
           if (res[i] == '0')
             return false;
-        } else {
+        }
+        else
+        {
           if (res[i] != '1')
             return false;
         }
@@ -51,9 +66,11 @@ public:
     }
   }
 };
-bool hasAlternatingBits(int n) {
+bool hasAlternatingBits(int n)
+{
   int prev = 2;
-  while (n > 0) {
+  while (n > 0)
+  {
     int cur = n % 2;
     if (prev == cur)
       return false;
@@ -62,7 +79,8 @@ bool hasAlternatingBits(int n) {
   }
   return true;
 }
-int main() {
+int main()
+{
   Solution s;
   string res = s.inttostringTwo(5);
   string res1 = s.inttostringTwo(7);

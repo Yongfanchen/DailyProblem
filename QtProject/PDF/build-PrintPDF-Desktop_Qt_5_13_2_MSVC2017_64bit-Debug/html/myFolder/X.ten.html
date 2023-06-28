@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始条件</title>
+</head>
+<body>
+    <p><center><h1>初始条件</h1></center></p>
+    <p><center><h2>初始速度</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.10.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.10.1_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>初始速度（initial velocity）的设置步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“初始条件”图标，点击“新建”初始条件，名称为”Init_1”；</p>
+    <p style="text-indent: 32px;">②初始条件类型选择“速度/角速度”；</p>
+    <p style="text-indent: 32px;">③为待选择的目标部件节点施加初始速度，V1、V2、V3为系统坐标下的X，Y，Z方向的初始速度分量；若要定义初始角速度，则需要勾选“旋转角速度”，设置角速度（弧度制）、旋转轴坐标及法向向量；</p>
+    <p style="text-indent: 32px;">④对象类型选择“节点”或者“刚体”；</p>
+    <p style="text-indent: 32px;">⑤作用对象选择“拾取”，Shift+鼠标左键点选或框选待约束区域节点；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成加速度/角加速度约束的施加。 </p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>1.必须定义的属性设置</strong></p>
+    <p style="text-indent: 48px;"><strong>Type</strong></p>
+    <p style="text-indent: 48px;">当type=stress，用于给指定的单元集合设置初始应力值。</p>
+
+    <p style="text-indent: 32px;"><strong>2.可选的属性设置</strong></p>
+    <p style="text-indent: 48px;"><strong>Set</strong></p>
+    <p style="text-indent: 48px;">用于指定设置初始条件的集合，可以为单元集合、节点集合，但是必须与type适配的集合一一对应。</p>
+
+    <p style="text-indent: 32px;"><strong>3.参数行：</strong></p>
+    <p style="text-indent: 48px;"><strong>当type=velocity时，必须指定三个方向的速度值。</strong></p>
+    <p style="text-indent: 48px;">可以增加*rotate子关键字，用于追加定义旋转角速度</p>
+   
+    <p style="text-indent: 32px;"><strong>*rotate:</strong></p>
+
+    <p style="text-indent: 48px;">追加定义初始的旋转角速度</p>
+    <p style="text-indent: 48px;">参数行</p>
+    <p style="text-indent: 48px;">1）角速度，2）旋转轴x起始坐标，3)旋转轴y起始坐标，4）旋转轴z起始坐标，5）旋转轴法向量x分量，6）旋转轴法向量y分量，5）旋转轴法向量z分量</p>
+ 
+
+    
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*initial, type = velocity, set = Initial_Set_12</p>
+    <p style="text-indent: 32px;">0, 10, 0</p>
+    <p style="text-indent: 32px;">*rotate</p>
+    <p style="text-indent: 32px;">5, 0,0,0, 0,1,0</p>
+
+ 
+</body>
+</html>

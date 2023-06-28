@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>局部坐标系</title>
+</head>
+<body>
+    <p><center><h2>局部坐标系</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.FIFTEEN_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.FIFTEEN_2.png" /></center></td>
+            <td><center><img src="images/X.FIFTEEN_3.png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+ 
+    <p>局部坐标系（CoordinateSystem）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“坐标系”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”局部坐标系，名称为“CS_1”；</p>
+    <p style="text-indent: 32px;">③设置局部坐标系“类型”为“直角坐标系”，设置方式为“三点”定义的方式</p>
+    <p style="text-indent: 32px;">④依次用Shift+鼠标左键在模型上指定“原点”、“X轴上一点”及“XY平面上一点”；</p>
+    <p style="text-indent: 32px;">⑤若选择的XY平面上一点关于原点与X轴正交，则XY平面上一点定义Y轴，确定X轴及Y轴后可由右手定则确定Z轴；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成局部直角坐标系的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*CoordinateSystem：定义局部坐标系</strong></p>
+    <p ><strong>1.必须定义的属性：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Type</strong></p>
+    
+    <p style="text-indent: 48px;">当type=Rectangular时，定义直角坐标系</p>
+    <p style="text-indent: 48px;">当type=Cylindrical时，定义柱面坐标系</p>
+    <p style="text-indent: 48px;">当type=Spherical时，定义球面坐标系</p>
+
+    <p style="text-indent: 32px;"><strong>Name</strong></p>
+    <p style="text-indent: 48px;">定义局部坐标的名称</p>
+
+    <p ><strong>2.可选定义的属性：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>property (仅当type=Rectangular时可用，且为必选项)</strong></p>
+    <p style="text-indent: 48px;">当property = node时，用于说明该局部坐标系通过节点来定义</p>
+    <p style="text-indent: 48px;">当property = system时，用于说明该局部坐标系通过三点坐标来定义</p>
+    <p style="text-indent: 48px;">当property = vector时，用于说明该局部坐标系通过两个向量来定义</p>
+
+    <p style="text-indent: 32px;"><strong>Update (仅当property = node时可用，为可选项)</strong></p>
+    <p style="text-indent: 48px;">当Update=Yes时，说明该局部坐标系每时每刻都在更新</p>
+    <p style="text-indent: 48px;">当Update=No时，说明该局部坐标系不随时间更新</p>
+
+   
+    <p style="text-indent: 32px;"><strong>Rotation (仅当property = vector时可用，为可选项)</strong></p>
+    <p style="text-indent: 48px;">Rotation=节点ID，定义该局部坐标系随该节点转动</p>
+
+
+    <p ><strong>3.参数行</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当type=Rectangular时</strong></p>
+    <p style="text-indent: 48px;">a.当property = node时：</p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1、节点1（原点）的ID。</p>
+    <p style="text-indent: 48px;">2、节点2（x轴上一点）的ID。</p>
+    <p style="text-indent: 48px;">3、节点3（x-y平面上一点）的ID。</p>
+    <p style="text-indent: 48px;">b.当property = system时：</p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1、节点1（原点）的坐标x1/y1/z1。</p>
+    <p style="text-indent: 48px;">2、节点2（x轴上一点）的坐标x2/y2/z2。</p>
+    <p style="text-indent: 48px;">3、节点3（x-y平面上一点）的坐标x3/y3/z3。</p>
+    <p style="text-indent: 48px;">c.当property = vector时：（原点默认为0/0/0）</p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1、节点1（x轴上一点）的坐标x2/y2/z2。</p>
+    <p style="text-indent: 48px;">2、节点2（x-y平面上一点）的坐标x3/y3/z3。</p>
+
+
+
+    <p style="text-indent: 32px;"><strong>当type=Cylindrical时</strong></p>
+    <p style="text-indent: 48px;">定义极轴上两点a、b。</p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1、z轴点a的坐标。</p>
+    <p style="text-indent: 48px;">2、z轴点b的坐标</p>
+
+    <p style="text-indent: 32px;"><strong>当type=Spherical时</strong></p>
+    <p style="text-indent: 48px;">定义极轴上两点a、b。</p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1、z轴点a的坐标。</p>
+    <p style="text-indent: 48px;">2、z轴点b的坐标</p>
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*coordinatesystem, type = rectangular, name = CS_1, property = system</p>
+    <p style="text-indent: 32px;">210, 100, 100, 210, 100, 50, 170, 100, 100</p>
+
+</body>
+</html>

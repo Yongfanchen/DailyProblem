@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转动副</title>
+</head>
+<body>
+    <p><center><h2>转动副</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.5_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.5_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>转动副（RevolutJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+
+    <p style="text-indent: 32px;">③连接类型选择“转动副”；</p>
+
+    <p style="text-indent: 32px;">④依次定义节点1~节点4，其中节点1和节点3从属于PART-A，节点2和节点4从属于PART-B，节点1和节点3定义转动副的旋转轴。在空间坐标上，节点1、2重合，节点3、4重合。这样方可实现PART-A和PART-B的转动副连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成转动副的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=RevolutJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）阻尼因子（默认值1.0），6）罚因子调整项（默认值1.0）；</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = revolutejoint</p>
+    <p style="text-indent: 32px;">5000,5001,5002,5003,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part3,nset7</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset7</p>
+    <p style="text-indent: 32px; color: blue;" >5000,5002</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part4,nset8</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >5001,5003</p>
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+
+
+
+ 
+</body>
+</html>

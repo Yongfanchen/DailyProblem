@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>离散梁截面</title>
+</head>
+<body>
+    <p><center><h2>离散梁截面</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.3.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.3.2_2.png" /></center></td>
+            <td><center><img src="images/X.5.3.2_3.png" /></center></td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <p>离散梁截面定义步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“截面”图标，进入截面属性定义及赋予面板，新建属性名称“Property_8”；</p>
+    <p style="text-indent: 32px;">②属性截面栏选择“梁截面”；</p>
+    <p style="text-indent: 32px;">③分类栏选择“离散梁截面”；</p>
+    <p style="text-indent: 32px;">④材料列表中选择已经创建的“Discrete_Beam”(材料定义操作详材料定义章节)；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”完成截面属性的定义；</p>
+    <p style="text-indent: 32px;">⑥可以在左侧看到名称为“Property_8”的属性；</p>
+    <p style="text-indent: 32px;">⑦点击左下角属性列表中的“赋予”按钮，弹出赋予属性窗口,方式设置为“拾取”；</p>
+    <p style="text-indent: 32px;">⑧Shift+鼠标左键点选模型，可以看到梁单元高亮显式</p>
+    <p style="text-indent: 32px;">⑨点击“赋予”按钮，完成截面属性的赋予。</p>
+    
+
+
+
+
+   
+
+
+    
+ 
+    <p style="text-indent: 32px;"><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;"><strong>当Type=Discrete时：</strong></p>
+    <p style="text-indent: 48px;">1.离散梁单元的局部坐标系更新准则:</p>
+    <p style="text-indent: 64px;">为-3：基于节点1的角速度更新，计算剪切力导致的转矩</p>
+    <p style="text-indent: 64px;">为-2：基于节点1的角速度更新，计算剪切力导致的转矩，将r轴调整为沿节点1指向节点2</p>
+    <p style="text-indent: 64px;">为-1：基于节点1的角速度更新</p>
+    <p style="text-indent: 64px;">为 0：基于节点 1与节点2 的平均值更新</p>
+    <p style="text-indent: 64px;">为 1：基于节点2的角速度更新</p>
+    <p style="text-indent: 64px;">为 2：基于节点2的角速度更新，计算剪切力导致的转矩，将r轴调整为沿节点1指向节点2</p>
+    <p style="text-indent: 64px;">为 3：基于节点2的角速度更新，计算剪切力产生的转矩</p>
+    
+    <p style="text-indent: 48px;">2.离散梁单元的体积</p>
+    <p style="text-indent: 48px;">3.质量惯性矩</p>
+
+
+ 
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*section, type = structural, name =Property_8, mat = Discrete_Beam</p>
+    <p style="text-indent: 32px;">*beamsection, type = Discrete</p>
+    <p style="text-indent: 32px;">0, 1, 0</p>
+
+
+
+
+    
+</body>
+</html>

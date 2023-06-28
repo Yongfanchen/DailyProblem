@@ -1,0 +1,49 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>拓扑优化</title><link rel="stylesheet" href="./spuerlink.css">
+        <!-- <link rel="stylesheet" href="./spuerlink.css"> -->
+    </head>
+    <body style="font-size:12pt;font-family:helvetica">
+
+        <p><center><h2>拓扑优化</h2></center></p>
+
+        <p style="text-indent: 32px;">
+            拓扑优化（topology optimization）是一种根据给定的负载情况、约束条件和性能指标，
+            在给定的区域内对材料分布进行优化的数学方法，是结构优化的一种。MxSim支持对结构进行拓扑优化。
+        </p>
+        <p><center><h2>拓扑优化步骤</h2></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;①点击“拓扑优化”图标；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;②创建设计域，点“+”添加设计域；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;②-1设计域定义方式，可以选择通过“截面属性”（单元属性）创建，也可通过“集合”“零件”创建设计域；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③优化响应参数创建，点“+”添加响应参数；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③-1参数类型可选“柔度”（刚度的反义）、“频率”（模态分析）、“体积分数”、“应力”等；可以创建多个优化响应参数，用于定义约束条件和优化目标。<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;④优化约束条件的创建，点“+”创建约束条件；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;④-1约束响应可在已创建的“优化响应参数”中选择，选择参数后，设置响应的边界值（最大、最小），点“确定”完成创建；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⑤优化目标的创建，点“+”创建优化目标；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⑤-1优化目标可在已创建的“优化响应参数”中选择，选择参数后，方式可选“最小化”、“最大化”、“最小化最大值”、“最大化最小值”等，点“确定”完成创建；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⑥点击“确定”完成拓扑优化任务的创建；<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⑦优化任务列表中显示已经创建的优化任务。<br />
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/thirteen(1).png" /></center></td>
+            </tr>
+        </table>
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/thirteen(2).png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+
+
+    </body>
+</html>
+

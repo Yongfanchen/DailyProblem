@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输出</title>
+</head>
+<body>
+    <p><center><h2>输出</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.TWENTY_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+
+ 
+    <p>输出（output）的设置（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“输出”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”名称为“FieldOutput_1”的输出名称；</p>
+    <p style="text-indent: 32px;">③输出类型选择为“场变量”或者“历程变量”，并定义数据“输出时间”间隔；</p>
+    <p style="text-indent: 32px;">④输出类型可选择“节点”或者“单元”；</p>
+    <p style="text-indent: 32px;">⑤设置“输出场变量”，灰色部分为默认输出的场变量；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”，完成场变量的输出设置。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*output：定义输出</strong></p>
+    <p ><strong>1.必须定义的属性设置:</strong></p>
+    <p style="text-indent: 32px;"><strong>mode</strong></p>  
+    <p style="text-indent: 48px;">当mode=mxdb，定义输出文件格式是mxdb场输出格式。</p>
+    <p style="text-indent: 48px;">当mode=mxh，定义输出文件格式是mxh历程数据输出格式。</p>
+    <p ><strong>2.可选的属性</strong></p>
+    <p style="text-indent: 32px;"><strong>name</strong></p>
+    <p style="text-indent: 48px;">定义该输出的名称。</p>
+    <p ><strong>（以下参数frequency和time interval是互斥的参数，当两者都未定义时，默认输出20帧计算结果）</strong></p>
+    <p style="text-indent: 32px;"><strong>time interval</strong></p>  
+    <p style="text-indent: 48px;">定义输出文件的输出时间间隔。</p>
+    <p style="text-indent: 32px;"><strong>frequency</strong></p> 
+    <p style="text-indent: 48px;">定义输出文件的输出频率。</p>
+    <p ><strong>3.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>无</strong></p>
+    
+
+ 
+    <p><strong>*field：定义场变量输出</strong></p>
+    <p ><strong>1.必须定义的属性设置:</strong></p>
+    <p style="text-indent: 32px;"><strong>object</strong></p>  
+    <p style="text-indent: 48px;">当object=node，定义节点对象的场输出；</p>
+    <p style="text-indent: 48px;">当object=element，定义单元对象的场输出。</p>
+    <p ><strong>2.可选的属性</strong></p>
+    <p style="text-indent: 32px;"><strong>set</strong></p>
+    <p style="text-indent: 48px;">定义输出对象集合，该属性缺省时，默认输出对象集合是整体模型。</p>
+    
+
+
+    
+    <p style="text-indent: 32px;"><strong>variable</strong></p>  
+    <p style="text-indent: 48px;">当variable=default，定义当前输出对象下对应的默认场变量的输出；</p>
+    <p style="text-indent: 48px;">当variable=all，定义当前输出对象下对应的所有场变量的输出。</p>
+
+    <p ><strong>3.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>输出变量标识符（逗号隔开，或者换行隔开，每行最多可打印8个变量名称），当variable属性缺省时，参数行不可为空。</strong></p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.TWENTY_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p><strong>*history：定义历史变量输出</strong></p>
+    <p ><strong>1.必须定义的属性设置:</strong></p>
+    <p style="text-indent: 32px;"><strong>object</strong></p>  
+    <p style="text-indent: 48px;">当object=node，定义节点对象的历程输出；</p>
+    <p style="text-indent: 48px;">当object=element，定义单元对象的历程输出。</p>
+    <p style="text-indent: 48px;">当object=energy，定义能量的历程输出。</p>
+    <p style="text-indent: 48px;">当object=mat，定义部件的能量、刚体位移的历程输出</p>
+    <p style="text-indent: 48px;">当object=RigidWall，定义刚性墙的合力输出</p>
+    <p style="text-indent: 48px;">当object=SectionForce，定义截面力的输出</p>
+    <p style="text-indent: 32px;"><strong>set</strong>（仅当object=节点和单元时是必选项，否则为可选项）</p>
+    <p style="text-indent: 48px;">定义输出对象集合。</p>
+
+
+    <p ><strong>2.可选的属性</strong></p>
+    <p style="text-indent: 32px;"><strong>variable</strong></p>
+    <p style="text-indent: 48px;">当variable=default，定义当前输出对象下对应的默认历程变量的输出；</p>
+    <p style="text-indent: 48px;">当variable=all，定义当前输出对象下对应的所有历程变量的输出。</p>
+
+    <p ><strong>3.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>输出变量标识符（逗号隔开，每行最多可打印8个变量名称），当variable属性缺省时，参数行不可为空。</strong></p>
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*output, mode = mxdb, name = FieldOutput_1, timeInterval = 10</p>
+    <p style="text-indent: 32px;">*field, object = element, variable = all</p>
+
+
+
+
+</body>
+</html>

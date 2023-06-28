@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分布耦合</title>
+</head>
+<body>
+    <p><center><h2>分布耦合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.19_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.19_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>分布耦合（DistributingCoupling）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“分布耦合”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选定义参考节点，然后点击“约束表面”，在弹出的对话框中选择定义的面，定义影响半径和待约束的自由度；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成对分布耦合的定义。</p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=DistributingCoupling时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）参考节点ID，2）约束影响半径（可缺省），3）被分布到耦合节点上的质量（可缺省），4）加权方法（可缺省）。</p>
+    <p style="text-indent: 48px;">第二行：1）被约束的节点表面的名称，2）将被约束的第一自由度（若缺省，则约束全部自由度），3）将被约束的最后一个自由度（若缺省，仅约束参数指定的第一自由度）。</p>
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = distributingcoupling</p>
+    <p style="text-indent: 32px;">1243,10</p>
+    <p style="text-indent: 32px;">surface_2,1,2</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*surface, type = node, name = surface_2</p>
+    <p style="text-indent: 32px; color: blue;" >2553</p>
+    <p style="text-indent: 32px; color: blue;" >2564</p>
+    <p style="text-indent: 32px; color: blue;" >2575</p>
+    <p style="text-indent: 32px; color: blue;" >2586</p>
+    <p style="text-indent: 32px; color: blue;" >2597</p>
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+ 
+</body>
+</html>

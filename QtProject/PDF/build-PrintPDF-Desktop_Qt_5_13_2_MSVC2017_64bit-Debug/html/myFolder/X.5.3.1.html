@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>积分梁截面</title>
+</head>
+<body>
+    <p><center><h2>积分梁截面</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.3.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.3_2.png" /></center></td>
+            <td><center><img src="images/X.5.3_3.png" /></center></td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <p>积分梁截面定义步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“截面”图标，进入截面属性定义及赋予面板，新建属性名称“intbeam_PID6”(自定义)；</p>
+    <p style="text-indent: 32px;">②属性截面栏选择“梁截面”；</p>
+    <p style="text-indent: 32px;">③分类栏选择“积分梁截面”；</p>
+    <p style="text-indent: 32px;">④材料列表中选择已经创建的“mat3”(材料定义操作详材料定义章节)；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”完成截面属性的定义；</p>
+    <p style="text-indent: 32px;">⑥可以在左侧看到名称为“intbeam_PID6”的属性；</p>
+    <p style="text-indent: 32px;">⑦点击左下角属性列表中的“赋予”按钮，弹出赋予属性窗口,方式设置为“拾取”；</p>
+    <p style="text-indent: 32px;">⑧Shift+鼠标左键点选模型，可以看到梁单元高亮显式</p>
+    <p style="text-indent: 32px;">⑨点击“赋予”按钮，完成截面属性的赋予。</p>
+
+
+
+
+   
+
+
+    
+ 
+    <p style="text-indent: 32px;"><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;"><strong>当Type=Integrated时：</strong></p>
+    <p style="text-indent: 48px;">第一行:</p>
+    <p style="text-indent: 64px;">1.积分规则：1表示一点积分；2表示2*2高斯积分；3表示3*3高斯积分</p>
+    <p style="text-indent: 64px;">2.截面形状：0表示矩形；1.0表示圆型</p>
+    <p style="text-indent: 48px;">第二行：</p>
+    <p style="text-indent: 64px;">1.节点1的外径，或矩形s方向边长；</p>
+    <p style="text-indent: 64px;">2.节点2的外径，或矩形t方向边长；</p>
+    <p style="text-indent: 64px;">3.节点1的内径，或矩形s方向边长；</p>
+    <p style="text-indent: 64px;">4.节点2的内径，或矩形t方向边长。</p>
+ 
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*section, type = structural, name =intbeam_PID6, mat = mat3</p>
+    <p style="text-indent: 32px;">*beamsection, type = Integrated</p>
+    <p style="text-indent: 32px;">0, 1</p>
+    <p style="text-indent: 32px;">1, 1, 0, 0</p>
+
+
+
+    
+</body>
+</html>

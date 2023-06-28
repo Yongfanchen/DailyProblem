@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定义分析类型</title>
+</head>
+<body>
+    <p><center><h2>定义分析类型</h2></center></p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.SEVEN.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p style="text-indent: 32px;">分析类型的定义步骤（对应上图）</p>
+    <p style="text-indent: 48px;">①主功能工具栏点击“分析类型”图标；</p>
+    <p style="text-indent: 48px;">②点击“新建”输入分析类型名称为“Case_1”；</p>
+    <p style="text-indent: 48px;">③选择分析类型，本算例为“显式动态分析”；</p>
+    <p style="text-indent: 48px;">④定义“终止时间”、“质量缩放控制设置”及“安全因子”；</p>
+    <p style="text-indent: 48px;">⑤点击“确定”按钮，完成分析类型的定义。</p>
+
+
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>1.必须的属性设置：</strong></p>
+    <p style="text-indent: 48px;"><strong>Type</strong></p>
+    <p style="text-indent: 48px;">当type=explicitdynamic，定义显式动态分析不包含SPH模块分析）。</p>
+    <p style="text-indent: 48px;">当type=SPHExplicitDynamics，定义SPH-FEM耦合动态分析。</p>
+    <p style="text-indent: 48px;">当type=fluid，定义显式流体分析。</p>
+
+
+    <p style="text-indent: 32px;"><strong>2.可选的属性设置：</strong></p>
+    <p style="text-indent: 48px;"><strong>name</strong></p>
+    <p style="text-indent: 48px;">用于定义分析类型的名称。</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*explicit_analysis, type = explicitdynamics, name = Case_1</p>
+    <p style="text-indent: 32px;">*timestep</p>
+    <p style="text-indent: 32px;">,1</p>
+
+    <p style="text-indent: 32px;">*autostepcontrol</p>
+    <p style="text-indent: 32px;">0, 100, 0.8</p>
+    
+</body>
+</html>

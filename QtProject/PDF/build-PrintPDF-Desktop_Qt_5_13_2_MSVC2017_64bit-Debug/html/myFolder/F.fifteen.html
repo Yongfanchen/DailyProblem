@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子元器件散热</title>
+</head>
+<body>
+    <p><center><h2>电子元器件散热</h2></center></p>
+    <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >1.案例描述</p>
+    <p style="text-indent: 32px;">下图为电子元器件模型，其设计通常适用于计算机设备，
+        例如机箱电子元器件散热。内存芯片位于 CPU 单元旁边。许多大小不同的电容器、芯片、
+        接口等电子元件散布在主板上。散热器位于CPU上方，将CPU的热量传导至冷却空气中。
+        本案例对下图中所示的电子元器件进行流体场共轭热传导分析。</p>
+
+    <p style="text-indent: 32px;">进口：速度0.1m/s，温度300k</p>
+    <p style="text-indent: 32px;">出口压力0，温度300k</p>
+    <p style="text-indent: 32px;">外壁面：温度300k，对流换热系数10w/（m^2*K）</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.1(1).png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.1(2).png" /></center></td>
+            <td><center><img src="images/F.15.1(3).png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+
+    <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >2.材料属性</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.2(1).png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.2(2).png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >3.前处理设置</p>
+    <p style="text-indent: 32px; " >(1).前处理设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.1.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(2).通用设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.2.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(3).物理模型设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.3.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(4).材料设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.4.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(5).定义域设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.5.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(6).边界条件设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.6.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(7).离散格式设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.7.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(8).初始设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.8.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; " >(9).初始设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.3.9.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >4.计算设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.4.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >5.后处理设置</p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.15.5.png" /></center></td>
+            <!-- <td><center><img src="images/F.15.2(2).png" /></center></td> -->
+        </tr>
+    </table>
+    <br />
+    <br />
+
+</body>
+</html>

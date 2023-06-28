@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壳边-壳边绑定</title>
+</head>
+<body>
+    <p><center><h2>壳边-壳边绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.23_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.23_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>壳边-壳边绑定（TieEdge）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“壳边-壳边绑定”；</p>
+    <p style="text-indent: 32px;">④节点选取方式设置为“拾取”，Shift+鼠标左键点选PART1的边节点作为“从边节点集”，Shift+鼠标左键自上而下或从下到上按顺序点选与PART1相邻的PART2边节点作为“主边节点集”，定义”失效塑性应变值”，连接处节点塑性应变超过该阈值时，连接失效；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成壳边-壳边绑定的定义。</p>
+
+
+
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=TieEdge时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从边节点集合名，2）主边节点集合名。</p>
+    <p style="text-indent: 48px;">第二行：基于节点等效塑性应变失效的应变阈值（默认阈值为0，若为默认值，则不考虑连接失效）。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tieedge</p>
+    <p style="text-indent: 32px;">nset7,nset8</p>
+    <p style="text-indent: 32px;">10</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset7</p>
+    <p style="text-indent: 32px; color: blue;" >1232,    1243,    1254,    1265,    1276,    1287,    1298,    1309</p>
+    <p style="text-indent: 32px; color: blue;" >1320,    1331,    1221</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >2575,    2564,    2553,    2542,    2586,    2597,    2608,    2619</p>
+    <p style="text-indent: 32px; color: blue;" >2630,    2641,    2652</p>
+
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+ 
+</body>
+</html>

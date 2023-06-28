@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>离散格式</title>
+</head>
+<body>
+    <p><center><h2>离散格式</h2></center></p>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.nine(1).png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/F.nine(2).png" /></center></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p style="text-indent: 32px;">离散格式就是控制体积的边界的取值方式。一阶离散格式一般收敛性要好于二阶离散格式，
+        但会产生准确性稍差的计算结果，特别是在三角形或四面体网格时。一般问题尽量选用二阶格式，少数问题收敛不太好，
+        可以先一阶格式算，再切换为二阶。</p>
+    <p style="text-indent: 32px;"><strong>一阶迎风格式</strong> ：由于考虑了流动方向的影响，在任何条件下都不会引起解的振荡，
+        永远都可以得到在物理上看起来是合理的解，但是，也限制了解的精度。</p>
+
+    <p style="text-indent: 32px;"><strong>二阶迎风格式</strong> ：可以看作是在一阶迎风格式的基础上发展而来，拥有更高的精度。</p>
+    <p style="text-indent: 32px;"><strong>Quick格式</strong> ：暂待开发。</p>
+    <p style="text-indent: 32px;"><strong>Muscl格式</strong> ：暂待开发。</p>
+
+</body>
+</html>

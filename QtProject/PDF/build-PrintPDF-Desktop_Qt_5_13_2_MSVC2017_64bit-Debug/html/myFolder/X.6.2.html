@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壳单元</title>
+</head>
+<body>
+    <p><center><h2>壳单元</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+
+
+    <p>壳单元定义和关联步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“单元”图标，点击“壳”进入单元选择窗口；</p>
+    <p style="text-indent: 32px;">②点击“三角形”选择“CPDSG”单元；</p>
+    <p style="text-indent: 32px;">③Shift+鼠标左键框选模型，可以看到三角形单元高亮显式；</p>
+    <p style="text-indent: 32px;">④点击“四边形”选择“BT”单元；</p>
+    <p style="text-indent: 32px;">⑤Shift+鼠标左键框选模型，可以看到所有单元高亮显式；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”，完成单元信息的关联。</p>
+
+
+    
+ 
+    <p ><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;"><strong>壳单元</strong></p>
+    <p style="text-indent: 32px;"><strong>当type=QPH时，用于定义QPH壳单元，共四个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3，5）节点编号4
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=BT时，用于定义BT壳单元，共四个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3，5）节点编号4
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=HL时，用于定义HL壳单元，共四个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3，5）节点编号4
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=MITC4时，用于定义MITC4壳单元，共四个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3，5）节点编号4
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=C0时，用于定义C0壳单元，共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=CPDSG时，用于定义CP-DSG壳单元，共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=CY时，用于定义CY壳单元，共四个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3，5）节点编号4
+        重复此行完成壳单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=DSG时，用于定义DSG壳单元，共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+        重复此行完成壳单元部件定义。</p>
+
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*element, type = CPDSG, part = Cans-FreeParts, section = shellsection1_PID1</p>
+    <p style="text-indent: 32px;">1,            1337,            1333,            1332</p>
+    <p style="text-indent: 32px;">2,            1362,            1404,            1441</p>
+    <p style="text-indent: 32px;">*element, type = BT, part = Cans-FreeParts, section = shellsection1_PID1</p>
+    <p style="text-indent: 32px;">21,            1460,            1385,            1415,            1438</p>
+    <p style="text-indent: 32px;">22,            1367,            1368,            1399,            1400</p>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QHelpCollectionProject version="1.0">
+    <docFiles>
+        <generate>
+            <file>
+                <input>mxhelp.qhp</input>
+                <output>mxhelp.qch</output>
+            </file>
+        </generate>
+        <register>
+            <file>mxhelp.qch</file>
+        </register>
+    </docFiles>
+</QHelpCollectionProject>

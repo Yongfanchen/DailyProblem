@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壳截面</title>
+</head>
+<body>
+    <p><center><h2>壳截面</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.2.png" /></center></td>
+            
+        </tr>
+    </table>
+
+
+
+    <p>壳截面定义步骤（对应上图）：</p>
+    <p style="text-indent: 32px;">①主功能工具栏点击“截面”图标，进入截面属性定义及赋予面板，属性名称默认为“Property_1”；</p>
+    <p style="text-indent: 32px;">②属性分类栏选择“壳截面”；</p>
+    <p style="text-indent: 32px;">③材料列表中选择已经创建的“Material_1”；</p>
+    <p style="text-indent: 32px;">④厚度设置为“0.28”，积分个数设置为“3”，点击“确定并赋予”完成截面属性的一键赋予。</p>
+
+    
+ 
+    <p style="text-indent: 32px;"><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;">*shellsection:指明是壳体截面属性</p>
+    <p style="text-indent: 32px;">第一行：</p>
+    <p style="text-indent: 32px;">1.厚度</p>
+    <p style="text-indent: 32px;">2.厚度方面的积分点个数</p>
+    <p style="text-indent: 32px;">3.分层标记（0：没有材料角度；1：需要设置材料角度）</p>
+    <p style="text-indent: 32px;">第二行：</p>
+    <p style="text-indent: 32px;">1.若分层标记=1，每个积分点对应的材料角度（一行最多八个参数）</p>
+ 
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*section, type = structural, name =Property_1, mat =Material_1</p>
+    <p style="text-indent: 32px;">*shellsection</p>
+    <p style="text-indent: 32px;">0.28, 3, 0</p>
+
+
+
+    
+</body>
+</html>

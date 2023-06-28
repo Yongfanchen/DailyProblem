@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点荷载</title>
+</head>
+<body>
+    <p><center><h2>点荷载</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.8.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.8.1_2.png" /></center></td>
+            <td><center><img src="images/X.8.1_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>点载荷（concentrated）的施加步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“载荷”图标，点击“新建”载荷，名称为”Load_3”；</p>
+    <p style="text-indent: 32px;">②载荷类型选择“点载荷”；</p>
+    <p style="text-indent: 32px;">③定义点载荷的方向向量(0,-1,0表示沿y轴负向的方向向量)，若定义曲线，则x,y,z为对应载荷方向的曲线调整系数；</p>
+    <p style="text-indent: 32px;">④点击“拾取”按钮；</p>
+    <p style="text-indent: 32px;">⑤Shift+鼠标左键点选单元上的目标节点，可以看到节点高亮显式；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成点载荷的施加；</p>
+    <p style="text-indent: 32px;">⑦可以看到点载荷的位置和方向。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>1.必须定义的属性设置</strong></p>
+    <p style="text-indent: 48px;"><strong>Type</strong></p>
+    <p style="text-indent: 48px;">当type=concentrated时，用于施加集中集中载荷，作用于节点集上。</p>
+    <p style="text-indent: 48px;"><strong>Set</strong></p>
+    <p style="text-indent: 48px;">用于指定被施加边界条件的集合，需要与Type指定的载荷类型相匹配。</p>
+
+
+    <p style="text-indent: 32px;"><strong>2.可选的属性设置</strong></p>
+    <p style="text-indent: 48px;"><strong>Name</strong></p>
+    <p style="text-indent: 48px;">用于说明本载荷的名称。</p>
+    <p style="text-indent: 48px;"><strong>Fun</strong></p>
+    <p style="text-indent: 48px;">用于指定载荷的曲线。</p>
+
+
+
+    
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*load, type = concentrated, set = Loadrigidbody4,function = curve1, name = Load_3</p>
+    <p style="text-indent: 32px;">1 ,0.0</p>
+    <p style="text-indent: 32px;">2 ,-1.000000</p>
+
+    <p style="text-indent: 32px;">3 ,0.0</p>
+    <p style="text-indent: 32px;">*function, type = linear, name = curve1</p>
+    <p style="text-indent: 32px;">0, 100</p>
+    <p style="text-indent: 32px;">1, 100</p>
+ 
+</body>
+</html>

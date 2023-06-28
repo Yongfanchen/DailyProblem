@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉伸压缩弹塑性</title>
+</head>
+<body>
+    <p><center><h2>拉伸压缩弹塑性</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=CompressionTensionPlasticity：定义拉伸压缩弹塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <p style="text-indent: 32px;">*compression：用于定义压缩硬化曲线</p>
+    <p style="text-indent: 32px;">*tension：用于定义拉伸硬化曲线</p>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：结构胶；单位制：mm-kg-ms</p>
+    <p style="text-indent: 32px;">*material, type = compressiontensionplasticity, name = Structural adhesive</p>
+    <p style="text-indent: 32px;">0.001, 0.35, 0.49, 0, 0</p>
+    <p style="text-indent: 32px;">0, 0</p>
+    <p style="text-indent: 32px;">*compression</p>
+    <p style="text-indent: 32px;">0.05, 0.01</p>
+    <p style="text-indent: 32px;">10, 1.57</p>
+    <p style="text-indent: 32px;">*tension</p>
+    <p style="text-indent: 32px;">0, 0.015</p>
+    <p style="text-indent: 32px;">0.05, 1e-08</p>
+    <p style="text-indent: 32px;">10, 1e-08</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+</body>
+</html>

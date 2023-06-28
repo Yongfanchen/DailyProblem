@@ -9,6 +9,14 @@
 using namespace std;
 class MyHashMap
 {
+private:
+    vector<list<pair<int, int>>> data;
+    static const int base = 769;
+    static int hash(int key)
+    {
+        return key % base;
+    }
+
 public:
     MyHashMap()
     {

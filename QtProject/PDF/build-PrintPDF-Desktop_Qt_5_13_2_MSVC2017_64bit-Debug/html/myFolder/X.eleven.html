@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连接</title>
+</head>
+<body>
+    <p><center><h1>连接</h1></center> </p>
+
+    <p><center><h2>点焊</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.1_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>点焊（spotweld）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+
+    <p style="text-indent: 32px;">③连接类型选择“点焊”；</p>
+
+    <p style="text-indent: 32px;">④鼠标点击“主节点”，Shift+鼠标左键点选模型节点（1331）作为主节点；同理，鼠标点击“从节点”，Shift+鼠标左键点选模型节点（2531）作为从节点；</p>
+
+    <p style="text-indent: 32px;">⑤定义点焊的失效参数；</p>
+
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成点焊连接的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=spotweld时</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从节点，2）主节点，3）失效法向力，4）失效切向力，5）法向失效因子，6）切向失效因子，7）失效时间，8）失效有效塑性应变</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = spotweld</p>
+    <p style="text-indent: 32px;">1331,2652,0,0,0,0,1e+20,1e+20</p>
+
+    <p><center><h2>节点刚体</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.2_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>节点刚体（MPC）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“节点刚体”；</p>
+    <p style="text-indent: 32px;">④鼠标点击“主节点”，Shift+鼠标左键点选模型节点（1320）作为主节点；同理，鼠标点击“从节点”，Shift+鼠标左键点选模型节点（2641）作为从节点；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成节点刚体的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=MPC时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点集合。</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = mpc</p>
+    <p style="text-indent: 32px;">connect_Set_7</p>
+    <p style="text-indent: 32px;">*set, type = node, name = connect_Set_7</p>
+
+    <p style="text-indent: 32px;">1320,2520</p>
+    <p><center><h2>合并刚体</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.3_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.3_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>合并刚体（mergerigidbody）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“合并刚体”；</p>
+    <p style="text-indent: 32px;">④鼠标点击“主刚体”，Shift+鼠标左键点选定义主刚体，主刚体外轮廓高亮显示；同理，鼠标点击“从刚体”，Shift+鼠标左键点选定义从刚体，从刚体外轮廓高亮显示；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成合并刚体的定义。</p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=mergerigidbody时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）主刚体，2）从刚体。</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = mergerigidbody</p>
+    <p style="text-indent: 32px;">Part02,Part01</p>
+
+    <p><center><h2>额外节点</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.4_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.4_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>额外节点（extranode）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">③连接类型选择“额外节点”；</p>
+    <p style="text-indent: 32px;">④鼠标点击“刚体”，Shift+鼠标左键点选择刚体模型；点选“多节点”，Shift+鼠标左键点选刚体模型外部的节点（非刚性节点）；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成额外节点的定义。</p>
+    <p style="text-indent: 32px; color: blue;">注：在定义转动副、球铰、圆柱副，移动副等连接件时，需要首先定义额外节点。</p>
+
+ 
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=extranode时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）刚体，2）节点集合</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = extranode</p>
+    <p style="text-indent: 32px;">part3,nset7</p>
+    <p style="text-indent: 32px;">*set, type = node, name = nset7</p>
+    <p style="text-indent: 32px;">5000,5002</p>
+
+    <p><center><h2>转动副</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.5_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.5_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>转动副（RevolutJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+
+    <p style="text-indent: 32px;">③连接类型选择“转动副”；</p>
+
+    <p style="text-indent: 32px;">④依次定义节点1~节点4，其中节点1和节点3从属于PART-A，节点2和节点4从属于PART-B，节点1和节点3定义转动副的旋转轴。在空间坐标上，节点1、2重合，节点3、4重合。这样方可实现PART-A和PART-B的转动副连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成转动副的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=RevolutJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）阻尼因子（默认值1.0），6）罚因子调整项（默认值1.0）；</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = revolutejoint</p>
+    <p style="text-indent: 32px;">5000,5001,5002,5003,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part3,nset7</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset7</p>
+    <p style="text-indent: 32px; color: blue;" >5000,5002</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part4,nset8</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >5001,5003</p>
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>球铰</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.6_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.6_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>球铰（SphericalJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“球铰”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1、节点2，其中节点1从属于PART-A，节点2从属于PART-B，在空间坐标上，节点1、2重合，这样方可实现PART-A和PART-B的球铰连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成球铰的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=SphericalJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）阻尼因子（默认值1.0），4）罚因子调整项（默认值1.0）；</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = sphericaljoint</p>
+    <p style="text-indent: 32px;">5000,5001,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part02,nset13</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part01,nset14</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset13</p>
+    <p style="text-indent: 32px; color: blue;" >5000</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset14</p>
+    <p style="text-indent: 32px; color: blue;" >5001</p>
+    
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>移动副</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.8_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.8_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>移动副（TranslationalJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“移动副”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点6，其中节点1、节点3及节点5从属于PART-A，节点2、节点4及节点6从属于PART-B，节点1和节点3定义圆柱副的中心线，节点5、6定义中心线外的节点。在空间坐标上，节点1、2重合，节点3、4重合，节点5、6重合。这样方可实现PART-A和PART-B的移动副连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成圆柱副的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=TranslationalJoint时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）节点5，6）节点6，7）阻尼因子（默认值1.0），8）罚因子调整项（默认值1.0）；
+        重复此行完成多个移动副的定义</p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = translationaljoint</p>
+    <p style="text-indent: 32px;">7000,7002,7001,7003,7004,7005,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >7000,7001,7004</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset9</p>
+    <p style="text-indent: 32px; color: blue;" >7002,7003,7005</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part1,nset8</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part2,nset9</p>
+
+    
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>平面副</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.9_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.9_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>平面副（PlanarJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“平面副”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点4，其中节点1和节点3从属于PART-A，节点2和节点4从属于PART-B，节点1和节点3定义平面副的平面法向。在空间坐标上，节点1、2重合，节点3、4重合。这样方可实现PART-A和PART-B的平面副连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成平面副的定义。</p>
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=PlanarJoint时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）阻尼因子（默认值1.0），6）罚因子调整项（默认值1.0）；</p>
+    <p style="text-indent: 48px;">重复此行完成多个平面副的定义。</p>
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = planarjoint</p>
+    <p style="text-indent: 32px;">7000,7001,7002,7003,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part3,nset13</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part4,nset14</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset13</p>
+    <p style="text-indent: 32px; color: blue;" >7000,7002</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset14</p>
+    <p style="text-indent: 32px; color: blue;" >7001,7003</p>
+
+
+    
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>万向节</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.10_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.10_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+
+
+    <p>万向节（UniversalJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“万向节”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点4，其中节点1和节点3从属于PART-A，节点2和节点4从属于PART-B。在空间坐标上，节点1、2重合，且由节点1、3组成的向量与有节点2、4组成的向量在空间上相互垂直。这样方可实现PART-A和PART-B的万向节连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成万向节的定义。</p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=UniversalJoint时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）阻尼因子，6）罚因子调整项；
+</p>
+    <p style="text-indent: 48px;">重复此行完成多个万向节的定义。</p>
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = universaljoint</p>
+    <p style="text-indent: 32px;">7100,7101,7102,7103,1,1</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset16</p>
+    <p style="text-indent: 32px; color: blue;" >7100,7102</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset17</p>
+    <p style="text-indent: 32px; color: blue;" >7101,7103</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part01,nset16</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part02,nset17</p>
+
+
+    
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>齿轮传动</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.11_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.11_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>齿轮传动（GearJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“齿轮传动”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点6，其中节点1、节点3及节点5从属于PART-A，节点2、节点4及节点6从属于PART-B，节点1、3和节点2、4分别定义主、从齿轮的法向，节点1、5和节点2、6分别定义主、从齿轮所在平面。这样方可实现PART-A和PART-B的齿轮传动连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成齿轮传动的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=GearJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）节点5，6）节点6，7）阻尼因子（默认值1.0），8）罚因子调整项（默认值1.0）；
+</p>
+    <p style="text-indent: 48px;">第二行：1）两齿轮分度圆半径之比，2）主动轮分度圆半径。</p>
+    <p style="text-indent: 48px;">直齿轮或斜齿轮传动时，参数1）为从动轮半径/主动轮半径；锥齿轮传动时，参数1）为主动轮半径/从动轮半径。</p>
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = GearJoint</p>
+    <p style="text-indent: 32px;">5875, 5877, 5876, 5878, 5879, 5880, 1.000000,1.000000</p>
+    <p style="text-indent: 32px;">1.000000, 0.000000</p>
+
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset1</p>
+    <p style="text-indent: 32px; color: blue;" >5875, 5876, 5879</p>
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset2</p>
+    <p style="text-indent: 32px; color: blue;" >5877, 5878, 5880</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part03, nset1</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >Part04, nset2</p>
+    
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>皮带轮传动</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.12_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.12_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>皮带轮传动（PulleyJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“皮带轮传动”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点6，其中节点1、节点3及节点5从属于PART-A，节点2、节点4及节点6从属于PART-B，节点1、3和节点2、4分别定义主、从皮带轮的法向，节点1、5和节点2、6分别定义主、从皮带轮所在平面。这样方可实现PART-A和PART-B的皮带轮传动连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成皮带轮传动的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=PulleyJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）节点5，6）节点6，7）阻尼因子，8）罚因子调整项；
+</p>
+    <p style="text-indent: 48px;">第二行：1）从动轮半径与主动轮半径之比，2）主动轮半径。</p>
+    
+
+    <p><center><h2>齿轮-齿条传动</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.13_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.13_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>齿轮-齿条传动（RackPinionJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“齿轮-齿条传动”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点6，其中节点1、节点3及节点5从属于PART-A（齿轮），节点2、节点4及节点6从属于PART-B（齿条），节点1、3定义齿轮的法向，节点2、6定义齿条平面法向，节点2、4定义齿条的移动方向，节点1、5定义齿轮所在平面。这样方可实现PART-A和PART-B的齿轮-齿条传动连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成齿轮-齿条传动的定义。</p>
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=RackPinionJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）节点5，6）节点6，7）阻尼因子（默认值1.0），8）罚因子调整项（默认值1.0）；
+</p>
+    <p style="text-indent: 48px;">第二行：1）齿轮分度圆半径。</p>
+    
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = RackPinionJoint</p>
+    <p style="text-indent: 32px;">7300, 7301, 7304, 7303, 7302, 7305, 1.000000,1.000000</p>
+    <p style="text-indent: 32px;">100.000000</p>
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part3, nset20</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part4, nset21</p>
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset20</p>
+    <p style="text-indent: 32px; color: blue;" >7300, 7304, 7302</p>
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset21</p>
+    <p style="text-indent: 32px; color: blue;" >7303, 7305, 7301</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+
+    <p><center><h2>对接焊缝</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.14_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.14_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>对接焊缝（ButtWeld）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“对接焊缝”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键依次点选定义主、从节点，对接焊缝要求主、从节点坐标相同，L等于沿焊缝方向相邻节点距离，D为壳体厚度；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，逐一完成对接焊缝的定义。
+    </p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=GenButtWeld时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点集合。
+</p>
+    <p style="text-indent: 48px;">第二行：1）失效时间，2）塑性失效的节点有效塑性应变阈值，3）脆性失效的失效应力阈值（失效应力），4）增强或削弱焊缝的参数（失效因子），5）焊缝长度，6）焊缝的厚度</p>
+    
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset21</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset23</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset25</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset27</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset21</p>
+    <p style="text-indent: 32px; color: blue;" > 21,      33</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset23</p>
+    <p style="text-indent: 32px; color: blue;" > 23,      35</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset25</p>
+    <p style="text-indent: 32px; color: blue;" >25,      37</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset27</p>
+    <p style="text-indent: 32px; color: blue;" > 27,      39</p>
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+
+    <p><center><h2>角焊缝</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.15_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.15_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>角焊缝（FilletWeld）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“角焊缝”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键依次点选定义主、从节点，并设置焊缝参数，其中“平行焊缝间距离”近似等于沿角焊缝方向的节点间距；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，逐一完成对角焊缝的定义。</p>
+
+ 
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=GenFilletWeld时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点集合。
+</p>
+    <p style="text-indent: 48px;">第二行：1）失效时间，2）塑性失效的节点有效塑性应变阈值，3）脆性失效的失效应力阈值（失效应力），4）增强或削弱焊缝的参数（失效因子），5）焊缝长度，6）平行焊缝之间的距离，7）焊缝喉道尺寸，8）焊缝与母体之间的角度。</p>
+    
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = genfilletweld</p>
+    <p style="text-indent: 32px;">connect_Set_13</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >1e+20,10,10,10,100,10,70,45</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = genfilletweld</p>
+    <p style="text-indent: 32px; color: blue;" >connect_Set_16</p>
+    <p style="text-indent: 32px; color: blue;" >1e+20,10,10,10,100,10,70,45</p>
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = connect_Set_13</p>
+    <p style="text-indent: 32px; color: blue;" >2553,1232</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = connect_Set_16</p>
+    <p style="text-indent: 32px; color: blue;" >2641,1320</p>
+
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>铆接</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.16_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.16_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>铆接（Rivet）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“铆接”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键依次点选相邻两实体PART的节点1和节点2，铆接可定义失效时间，超过定义的失效时间阈值，连接自动失效；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成对铆接的定义。</p>
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=Rivet时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）失效时间
+</p>
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = rivet</p>
+    <p style="text-indent: 32px;">2652,1331,1</p>
+
+
+    <p><center><h2>面面绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.17_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.17_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>面面绑定（Tie）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“面面绑定”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，定义方式可以选择“基于模型”的定义方式，此时需要确定单元为二维网格还是三维网格，Shift+鼠标左键选择目标面网格作为主/从面。也可以采用“基于已有面”的定义方式，点击“选择面”，在弹出窗口中选择之前定义的面即可；</p>
+    <p style="text-indent: 32px;">⑤定义好主/从面后，点击“确定”按钮，完成对面面绑定的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=tie时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从面，2）主面，3）容差
+</p>
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tie</p>
+    <p style="text-indent: 32px;">SegSet_2, SegSet_3,0</p>
+
+    <p><center><h2>运动耦合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.18_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.18_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>运动耦合（KinematicCoupling）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“运动耦合”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选定义参考节点，然后点击“约束表面”，在弹出的对话框中选择定义的面，定义影响半径和待约束的自由度；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成对运动耦合的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=KinematicCoupling时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）参考节点ID，2）约束影响半径（可缺省）。
+</p>
+<p style="text-indent: 48px;">第二行：1）被约束的节点表面的名称，2）被约束的第一自由度（若缺省，则约束全部自由度），
+</p>
+<p style="text-indent: 48px;">3）被约束的最后一个自由度（若缺省，仅约束参数指定的第一自由度）。
+</p>
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = kinematiccoupling</p>
+    <p style="text-indent: 32px;">1287,10</p>
+    <p style="text-indent: 32px;">surface_2,1,1</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*surface, type = node, name = surface_2</p>
+    <p style="text-indent: 32px; color: blue;" >2553</p>
+    <p style="text-indent: 32px; color: blue;" >2564</p>
+    <p style="text-indent: 32px; color: blue;" >2575</p>
+    <p style="text-indent: 32px; color: blue;" >2586</p>
+    <p style="text-indent: 32px; color: blue;" >2597</p>
+
+
+
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>分布耦合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.19_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.19_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>分布耦合（DistributingCoupling）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“分布耦合”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选定义参考节点，然后点击“约束表面”，在弹出的对话框中选择定义的面，定义影响半径和待约束的自由度；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成对分布耦合的定义。</p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=DistributingCoupling时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）参考节点ID，2）约束影响半径（可缺省），3）被分布到耦合节点上的质量（可缺省），4）加权方法（可缺省）。</p>
+    <p style="text-indent: 48px;">第二行：1）被约束的节点表面的名称，2）将被约束的第一自由度（若缺省，则约束全部自由度），3）将被约束的最后一个自由度（若缺省，仅约束参数指定的第一自由度）。</p>
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = distributingcoupling</p>
+    <p style="text-indent: 32px;">1243,10</p>
+    <p style="text-indent: 32px;">surface_2,1,2</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*surface, type = node, name = surface_2</p>
+    <p style="text-indent: 32px; color: blue;" >2553</p>
+    <p style="text-indent: 32px; color: blue;" >2564</p>
+    <p style="text-indent: 32px; color: blue;" >2575</p>
+    <p style="text-indent: 32px; color: blue;" >2586</p>
+    <p style="text-indent: 32px; color: blue;" >2597</p>
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>节点绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.20_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.20_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>节点绑定（TieNodes）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“节点绑定”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键依次点选定义主节点及从节点集，定义“失效塑性应变值”，和“连接单元类型”，对于二维网格，应选择“壳单元”；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成节点绑定的定义。</p>
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=TieNodes时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点集合，2）失效时的节点等效塑性应变阈值（默认为0，若为默认值，则不考虑失效），3）连接单元类型：0代表壳单元，1代表实体单元。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tienodes</p>
+    <p style="text-indent: 32px;">constrained_tied_nodes16,1,0</p>
+
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = constrained_tied_nodes16</p>
+    <p style="text-indent: 32px; color: blue;" >1261,2688,2689,2690</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>壳-实体耦合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.21_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.21_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>壳-实体耦合（ShellToSolid）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“壳-实体耦合”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选与实体节点位置重叠（非共节点关系）的“壳节点”，实体节点设置为“拾取”，Shift+鼠标左键自上而下或从下到上按顺序选择实体节点；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成壳-实体耦合的定义。</p>
+
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=ShellToSolid时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）壳单元上参与绑定的节点，2）实体单元上参与绑定的节点集合。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = shelltosolid</p>
+    <p style="text-indent: 32px;">2652,nset8</p>
+
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >1331,    1320,    1309,    1298,    1287</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>平动约束</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.22_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.22_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>平动约束（translation）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“平动约束”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选“主节点”，从节点设置为“拾取”，Shift+鼠标左键依次点选从节点，选择需要耦合的自由度（U1、U2、U3对应UX、UY、UZ）；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成平动约束的定义。</p>
+
+
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=translation时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）平动约束作用节点集合，2）约束的自由度ID，ID=1，约束节点集合x方向平动自由度；ID=2，约束节点集合y方向平动自由度；ID=3，约束节点集合z方向平动自由度；ID=4，约束节点集合x和y方向平动自由度；ID=5，约束y和z方向的平动自由度；ID=6，约束x和z方向的平动自由度；ID=7，约束节点集合x、y和z方向的平动自由度。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = translation</p>
+    <p style="text-indent: 32px;">NODESETCONSTN7, 7</p>
+
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = NODESETCONSTN7</p>
+    <p style="text-indent: 32px; color: blue;" >1309,    1320,    1331,    2630,    2641,    2652</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+    <p><center><h2>壳边-壳边绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.23_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.23_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>壳边-壳边绑定（TieEdge）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“壳边-壳边绑定”；</p>
+    <p style="text-indent: 32px;">④节点选取方式设置为“拾取”，Shift+鼠标左键点选PART1的边节点作为“从边节点集”，Shift+鼠标左键自上而下或从下到上按顺序点选与PART1相邻的PART2边节点作为“主边节点集”，定义”失效塑性应变值”，连接处节点塑性应变超过该阈值时，连接失效；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成壳边-壳边绑定的定义。</p>
+
+
+
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=TieEdge时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从边节点集合名，2）主边节点集合名。</p>
+    <p style="text-indent: 48px;">第二行：基于节点等效塑性应变失效的应变阈值（默认阈值为0，若为默认值，则不考虑连接失效）。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tieedge</p>
+    <p style="text-indent: 32px;">nset7,nset8</p>
+    <p style="text-indent: 32px;">10</p>
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset7</p>
+    <p style="text-indent: 32px; color: blue;" >1232,    1243,    1254,    1265,    1276,    1287,    1298,    1309</p>
+    <p style="text-indent: 32px; color: blue;" >1320,    1331,    1221</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >2575,    2564,    2553,    2542,    2586,    2597,    2608,    2619</p>
+    <p style="text-indent: 32px; color: blue;" >2630,    2641,    2652</p>
+
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+    <p><center><h2>失效绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.24_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.24_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>失效绑定（TieBreak）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“失效绑定”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，定义方式可以选择“基于模型”的定义方式，此时需要确定单元为二维网格还是三维网格，Shift+鼠标左键选择目标面网格作为主/从面。也可以采用“基于已有面”的定义方式，点击“选择面”，在弹出窗口中选择之前定义的面即可。同时可以定义”失效力”，连接处的失效力超过设置的阈值时，连接失效；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成失效绑定的定义。</p>
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=TieBreak时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从面，2）主面；</p>
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tiebreak, FailureType = N2S_FailureOnly</p>
+    <p style="text-indent: 32px;">Surf_1,connect_Set_4</p>
+    <p style="text-indent: 32px;">1e+08,1e+08</p>
+
+
+
+</body>
+</html>

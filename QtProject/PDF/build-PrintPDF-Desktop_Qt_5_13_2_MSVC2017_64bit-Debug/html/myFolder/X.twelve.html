@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接触</title>
+</head>
+<body>
+    <p><center><h1>接触</h1></center></p>
+    <p><h2>1.点对面接触</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.1_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>点对面接触（NODETOSURFACE）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“接触”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”接触；</p>
+    <p style="text-indent: 32px;">③接触类型选择“点对面接触”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，点击“选择面”，在弹出窗口中选择之前定义的面即可。同时可以定义“摩擦系数”和“接触阻尼”，若考虑单元失效，则应该勾选“侵蚀接触”；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成点对面接触的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>1.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>当type=NODETOSURFACE时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">表面名称,块组成的表面名称。</p>
+
+    <p ><strong>2.子关键字</strong></p>
+
+    <p style="text-indent: 32px;"><strong>*friction:</strong></p>
+    <p style="text-indent: 48px;">为摩擦参数，是接触部分的子关键字，可以缺省；</p>
+    <p style="text-indent: 48px;"><strong>a.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">静摩擦系数，动摩擦系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*ContactDamping::</strong></p>
+    <p style="text-indent: 48px;">为接触阻尼定义，是接触部分的子关键字，可以缺省</p>
+    <p style="text-indent: 48px;"><strong>a.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">阻尼系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*twopass:</strong></p>
+    <p style="text-indent: 48px;">为双向接触定义，是接触部分的子关键字，可以缺省，当type=NODETOSURFACE，此关键字无效。</p>
+    <p style="text-indent: 48px;"><strong>a.无参数行</strong></p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*contact, type = nodetosurface, name = Contact_1</p>
+    <p style="text-indent: 32px;">Node1, surface_5</p>
+    <p style="text-indent: 32px;">*friction</p>
+    <p style="text-indent: 32px;">0.1, 0.1</p>
+
+    <p><h2>2.面对面接触</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.2_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>面对面接触（SURFACETOSURFACE）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“接触”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”接触；</p>
+    <p style="text-indent: 32px;">③接触类型选择“面对面接触”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，点击“选择面”，在弹出窗口中选择之前定义的面即可。同时可以定义“摩擦系数”和“接触阻尼”，若考虑单元失效，则应该勾选“侵蚀接触”，对于双向接触类型，则应勾选“双向接触”；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成面对面接触的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>1.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>type=SURFACETOSURFACE时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">从面名称，主面名称。</p>
+
+    <p ><strong>2.子关键字</strong></p>
+
+    <p style="text-indent: 32px;"><strong>*friction:</strong></p>
+    <p style="text-indent: 48px;">为摩擦参数，是接触部分的子关键字，可以缺省；</p>
+    <p style="text-indent: 48px;"><strong>b.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">静摩擦系数，动摩擦系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*ContactDamping::</strong></p>
+    <p style="text-indent: 48px;">为接触阻尼定义，是接触部分的子关键字，可以缺省</p>
+    <p style="text-indent: 48px;"><strong>b.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">阻尼系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*twopass:</strong></p>
+    <p style="text-indent: 48px;">为双向接触定义，是接触部分的子关键字，可以缺省，当type=NODETOSURFACE，此关键字无效。</p>
+    <p style="text-indent: 48px;"><strong>b.无参数行</strong></p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*contact, type = surfacetosurface, name = Contact_1</p>
+    <p style="text-indent: 32px;">surface_2, surface_6</p>
+    <p style="text-indent: 32px;">*friction</p>
+    <p style="text-indent: 32px;">0.1, 0.1</p>
+
+    <p><h2>3.全局搜索接触</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.3_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.3_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>全局搜索接触（automatic）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“接触”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”接触；</p>
+    <p style="text-indent: 32px;">③接触类型选择“全局搜索接触”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，点击“选择面”，在弹出窗口中选择之前定义的面即可。同时可以定义“摩擦系数”和“接触阻尼”，若考虑单元失效，则应该勾选“侵蚀接触”，对于双向接触类型，则应勾选“双向接触”，若考虑单个部件由于大变形产生的自接触，则应勾选“自接触”；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成全局搜索接触的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>1.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>type=automatic时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">缺省两个参数，但保留“,”</p>
+
+    <p ><strong>2.子关键字</strong></p>
+
+    <p style="text-indent: 32px;"><strong>*friction:</strong></p>
+    <p style="text-indent: 48px;">为摩擦参数，是接触部分的子关键字，可以缺省；</p>
+    <p style="text-indent: 48px;"><strong>c.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">静摩擦系数，动摩擦系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*ContactDamping::</strong></p>
+    <p style="text-indent: 48px;">为接触阻尼定义，是接触部分的子关键字，可以缺省</p>
+    <p style="text-indent: 48px;"><strong>c.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">阻尼系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*twopass:</strong></p>
+    <p style="text-indent: 48px;">为双向接触定义，是接触部分的子关键字，可以缺省，当type=NODETOSURFACE，此关键字无效。</p>
+    <p style="text-indent: 48px;"><strong>c.无参数行</strong></p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*contact, type = automatic, name = Contact_1, self = yes</p>
+    <p style="text-indent: 32px;">,</p>
+    <p style="text-indent: 32px;">*friction</p>
+    <p style="text-indent: 32px;">0.1, 0.1</p>
+    <p style="text-indent: 32px;">*twopass</p>
+    <p><h2>4.部件间接触</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.4_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.12.4_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>部件间接触（general）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“接触”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”接触；</p>
+    <p style="text-indent: 32px;">③接触类型选择“部件间接触”；</p>
+    <p style="text-indent: 32px;">④点击“选择部件集合”，在弹出窗口中选择之前定义的部件集合即可。同时可以定义“摩擦系数”和“接触阻尼”，若考虑单元失效，则应该勾选“侵蚀接触”，对于双向接触类型，则应勾选“双向接触”，若考虑单个部件由于大变形产生的自接触，则应勾选“自接触”；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成部件间接触的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>1.参数行</strong></p>
+    <p style="text-indent: 32px;"><strong>type=general时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">部件集合的名称。</p>
+
+    <p ><strong>2.子关键字</strong></p>
+
+    <p style="text-indent: 32px;"><strong>*friction:</strong></p>
+    <p style="text-indent: 48px;">为摩擦参数，是接触部分的子关键字，可以缺省；</p>
+    <p style="text-indent: 48px;"><strong>d.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">静摩擦系数，动摩擦系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*ContactDamping::</strong></p>
+    <p style="text-indent: 48px;">为接触阻尼定义，是接触部分的子关键字，可以缺省</p>
+    <p style="text-indent: 48px;"><strong>d.参数行</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">阻尼系数。   </p>
+
+    <p style="text-indent: 32px;"><strong>*twopass:</strong></p>
+    <p style="text-indent: 48px;">为双向接触定义，是接触部分的子关键字，可以缺省，当type=NODETOSURFACE，此关键字无效。</p>
+    <p style="text-indent: 48px;"><strong>d.无参数行</strong></p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*contact, type = general, name = Contact_1, eroding = yes ,self = yes</p>
+    <p style="text-indent: 32px;">Set_7</p>
+    <p style="text-indent: 32px;">*friction</p>
+    <p style="text-indent: 32px;">0.2, 0.2</p>
+    <p style="text-indent: 32px;">*twopass</p>
+</body>
+</html>

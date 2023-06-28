@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壳-实体耦合</title>
+</head>
+<body>
+    <p><center><h2>壳-实体耦合</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.21_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.21_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>壳-实体耦合（ShellToSolid）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“壳-实体耦合”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键点选与实体节点位置重叠（非共节点关系）的“壳节点”，实体节点设置为“拾取”，Shift+鼠标左键自上而下或从下到上按顺序选择实体节点；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成壳-实体耦合的定义。</p>
+
+
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=ShellToSolid时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）壳单元上参与绑定的节点，2）实体单元上参与绑定的节点集合。</p>
+    
+
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = shelltosolid</p>
+    <p style="text-indent: 32px;">2652,nset8</p>
+
+
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset8</p>
+    <p style="text-indent: 32px; color: blue;" >1331,    1320,    1309,    1298,    1287</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+ 
+</body>
+</html>

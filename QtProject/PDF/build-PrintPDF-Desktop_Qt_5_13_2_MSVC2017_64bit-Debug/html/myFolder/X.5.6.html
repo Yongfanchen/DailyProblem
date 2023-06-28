@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全带截面</title>
+</head>
+<body>
+    <p><center><h2>安全带截面</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.6_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.5.6_2.png" /></center></td>
+            <td><center><img src="images/X.5.6_3.png" /></center></td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <p>安全带截面定义步骤（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">主功能工具栏点</p>
+    <p style="text-indent: 48px;">①主功能工具栏点击“截面”图标，进入截面属性定义及赋予面板，</p>
+    <p style="text-indent: 48px;">②新建属性名称“seatbelt3-PID3”；</p>
+    <p style="text-indent: 48px;">③属性截面栏选择“安全带截面”；</p>
+    <p style="text-indent: 48px;">④材料列表中选择已经创建的“mat4”(材料定义操作详材料定义章节)；</p>
+    <p style="text-indent: 48px;">⑤点击“确定”完成截面属性的定义；</p>
+    <p style="text-indent: 48px;">⑥可以在左侧看到名称为“seatbelt3-PID3”的属性；</p>
+    <p style="text-indent: 48px;">⑦点击左下角属性列表中的“赋予”按钮，弹出赋予属性窗口,方式设置为“拾取”；</p>
+    <p style="text-indent: 48px;">⑧Shift+鼠标左键点选模型，可以看到安全带单元高亮显式</p>
+    <p style="text-indent: 48px;">⑨点击“赋予”按钮，完成截面属性的赋予。</p>
+
+    
+ 
+    <p style="text-indent: 32px;"><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;"><strong>*SPHsection:指明是SPH单元截面属性</strong></p>
+    <p style="text-indent: 32px;">无属性及参数。</p>
+
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*section, type = structural, name =seatbelt3_PID3, mat = mat4</p>
+    <p style="text-indent: 32px;">*seatbeltsection</p>
+
+
+    
+</body>
+</html>

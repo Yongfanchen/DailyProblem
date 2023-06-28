@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>混凝土损伤模型</title>
+</head>
+<body>
+    <p><center><h2>混凝土损伤模型</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=ConcreteDamage：用于定义混凝土损伤材料，可定义配筋率，该材料定义必选状态方程。</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.3.3_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.3.3_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.3.3_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.3.3_4.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">*damagefunction（必选）</p>
+    <p style="text-indent: 32px;">第一行：1）损伤累计参数，2）插值缩放系数</p>
+    <p style="text-indent: 32px;">*PrincipalMaterialVSStrainRate</p>
+    <p style="text-indent: 32px;">第一行：1）应变率，2）主材料系数</p>
+    <p style="text-indent: 32px;">*ReinforcementVSStrainRate</p>
+    <p style="text-indent: 32px;">第一行：1）应变率，2）强化系数</p>
+    <!-- <p style="text-indent: 32px;">Mx文件示例：材料类型：C30混凝土；单位制：mm-t-s</p>
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：C30混凝土；单位制：mm-t-s</p> -->
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：材料类型：C40钢筋混凝土，5%配筋率；单位制：mm-t-s</strong></p>
+    <p style="text-indent: 32px;">*material, type = ConcreteDamage, name = C40</p>
+    <p style="text-indent: 32px;">2.5e-06, 0.2</p>
+    <p style="text-indent: 32px;">40, 7.5, 0.333, 0.0083, 7.5, 0.333, 0.0083</p>
+    <p style="text-indent: 32px;">0, 0.385, 0, 0, 0</p>
+    <p style="text-indent: 32px;">5, 206000, 0.3, 400, 8e+09</p>
+    <p style="text-indent: 32px;">*damagefunction</p>
+    <p style="text-indent: 32px;">0, 0.309</p>
+    <p style="text-indent: 32px;">8.62e-06, 0.543</p>
+    <p style="text-indent: 32px;">2.15e-05, 0.84</p>
+    <p style="text-indent: 32px;">3.14e-05, 0.975</p>
+    <p style="text-indent: 32px;">0.000395, 1</p>
+    <p style="text-indent: 32px;">0.000517, 0.79</p>
+    <p style="text-indent: 32px;">0.000638, 0.63</p>
+    <p style="text-indent: 32px;">0.000798, 0.469</p>
+    <p style="text-indent: 32px;">0.00327, 0.114</p>
+    <p style="text-indent: 32px;">0.909, 0</p>
+    <p style="text-indent: 32px;">*eqos, type = Murnaghan</p>
+    <p style="text-indent: 32px;">0, 0, 0</p>
+    <!-- <p style="text-indent: 32px;">*material, type = PseudoTensor, name = C40</p>
+    <p style="text-indent: 32px;">2.5e-09, 16800, 0.2</p>
+    <p style="text-indent: 32px;">40, 7.5, 0.333, 0.0083, 0, 0.385, 0, 5</p>
+    <p style="text-indent: 32px;">206000, 0.3, 400, 8000</p>
+
+    <p style="text-indent: 32px;">*damagefunction</p>
+    <p style="text-indent: 32px;">0, 0.309</p>
+    <p style="text-indent: 32px;">8.62e-06, 0.543</p>
+    <p style="text-indent: 32px;">2.15e-05, 0.84</p>
+    <p style="text-indent: 32px;">3.14e-05, 0.975</p>
+    <p style="text-indent: 32px;">0.000395, 1</p>
+    <p style="text-indent: 32px;">0.000517, 0.79</p>
+    <p style="text-indent: 32px;">0.000638, 0.63</p>
+    <p style="text-indent: 32px;">0.000798, 0.469</p>
+    <p style="text-indent: 32px;">0.00327, 0.114</p>
+    <p style="text-indent: 32px;">0.909, 0</p>
+    <p style="text-indent: 32px;">*eqos, type = Murnaghan</p>
+    <p style="text-indent: 32px;">0, 0, 0</p> -->
+    
+    <!-- <p style="text-indent: 32px;">*plastic</p>
+    <p style="text-indent: 32px;">0, 2.35e+08</p>
+    <p style="text-indent: 32px;">0.23, 0.554</p>
+    <p style="text-indent: 32px;">1, 0.555</p> -->
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.3.3_5.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+</body>
+</html>

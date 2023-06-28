@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常规塑性材料</title>
+</head>
+<body>
+    <p><center><h1>常规塑性材料</h1></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+
+    <p><h2>1.运动硬化</h2></p>
+    <p style="text-indent: 32px;">Type=kinematicplastic：定义运动硬化塑性材料材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：Q235钢；单位制：m-kg-s</p>
+    <p style="text-indent: 32px;">*material, type = kinematicplastic, name = Q235</p>
+    <p style="text-indent: 32px;">7850, 2.06e+11, 0.3, 2.35e+08, 4.7e+09, 0.5, 40, 5, 0.2</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.1_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p><h2>2.各向同性硬化</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=isotropicplastic：定义各向同性硬化塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：Q235钢；单位制：m-kg-s</p>
+    <p style="text-indent: 32px;">*material, type = isotropicplastic, name = Q235</p>
+    <p style="text-indent: 32px;">7850, 2.06e+11, 0.3, 2.35e+08, 4.7e+09</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.2_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p><h2>3.分段线性硬化</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=piecewiseplastic：定义分段线性硬化塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.3_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：Q235钢；单位制：m-kg-s</p>
+    <p style="text-indent: 32px;">*material, type = piecewiseplastic, name = Q235</p>
+    <p style="text-indent: 32px;">7850, 2.06e+11, 0.3, 2.35e+08, 40, 5, 0.25, 4.7e+09</p>
+    <p style="text-indent: 32px;">*plastic</p>
+    <p style="text-indent: 32px;">0, 2.35e+08</p>
+    <p style="text-indent: 32px;">0.23, 0.554</p>
+    <p style="text-indent: 32px;">1, 0.555</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.3_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p><h2>4.幂律硬化弹塑性</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=PowerLawPlasticMat：定义幂率硬化准则塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.4_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：非线性结构钢；单位制：m-kg-s</p>
+    <p style="text-indent: 32px;">*material, type = PowerLawPlasticMat, name = Steel</p>
+    <p style="text-indent: 32px;">7850, 2.00e+11, 0.3, 1.823415e9, 0.04679, 0,0</p>
+    <!-- <p style="text-indent: 32px;">*plastic</p>
+    <p style="text-indent: 32px;">0, 2.35e+08</p>
+    <p style="text-indent: 32px;">0.23, 0.554</p>
+    <p style="text-indent: 32px;">1, 0.555</p> -->
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.4_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p><h2>5.广义应力弹塑性</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=ResultantPlasticity：定义广义应力弹塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.5_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：Q235钢；单位制：m-kg-s</p>
+    <p style="text-indent: 32px;">*material, type = ResultantPlasticity, name = Q235</p>
+    <p style="text-indent: 32px;">7850, 2.06e+11, 0.3, 2.35e+08, 4.7e+09</p>
+    <!-- <p style="text-indent: 32px;">*plastic</p>
+    <p style="text-indent: 32px;">0, 2.35e+08</p>
+    <p style="text-indent: 32px;">0.23, 0.554</p>
+    <p style="text-indent: 32px;">1, 0.555</p> -->
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.5_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p><h2>6.拉伸压缩弹塑性</h2></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=CompressionTensionPlasticity：定义拉伸压缩弹塑性材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <p style="text-indent: 32px;">*compression：用于定义压缩硬化曲线</p>
+    <p style="text-indent: 32px;">*tension：用于定义拉伸硬化曲线</p>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：结构胶；单位制：mm-kg-ms</p>
+    <p style="text-indent: 32px;">*material, type = compressiontensionplasticity, name = Structural adhesive</p>
+    <p style="text-indent: 32px;">0.001, 0.35, 0.49, 0, 0</p>
+    <p style="text-indent: 32px;">0, 0</p>
+    <p style="text-indent: 32px;">*compression</p>
+    <p style="text-indent: 32px;">0.05, 0.01</p>
+    <p style="text-indent: 32px;">10, 1.57</p>
+    <p style="text-indent: 32px;">*tension</p>
+    <p style="text-indent: 32px;">0, 0.015</p>
+    <p style="text-indent: 32px;">0.05, 1e-08</p>
+    <p style="text-indent: 32px;">10, 1e-08</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.2.6_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+</body>
+</html>

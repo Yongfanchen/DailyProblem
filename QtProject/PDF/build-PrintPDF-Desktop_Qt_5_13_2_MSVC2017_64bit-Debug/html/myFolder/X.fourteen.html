@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曲线函数</title>
+</head>
+<body>
+    <p><center><h2>曲线函数</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.FOURTEEN.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+ 
+    <p>曲线函数（Function）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“曲线”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”曲线，曲线名称为“curve1”；</p>
+    <p style="text-indent: 32px;">③曲线类型设置为“线性曲线”；</p>
+    <p style="text-indent: 32px;">④重复点击“+”或就“-”可以增、减若干行，依次在曲线数据输入栏中输入X、Y散点数据，点击“显示曲线图”可以进行曲线预览</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成曲线的定义。</p>
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*function:定义函数信息</strong></p>
+    <p ><strong>1.必须的属性设置：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Type</strong></p>
+    
+    <p style="text-indent: 48px;">当type=constant，用于指定常数曲线。</p>
+    <p style="text-indent: 48px;">当type=linear，用于指定分段线性曲线。</p>
+    <p style="text-indent: 48px;">当type=smoothstep，用于光滑曲线。</p>
+
+    <p style="text-indent: 32px;"><strong>Name</strong></p>
+    <p style="text-indent: 48px;">用于指定曲线名称</p>
+
+    <p ><strong>2.参数行：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当type=constant时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）常数值</p>
+    <p style="text-indent: 48px;">仅一行完成曲线定义。</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=linear时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）x值；2）y值</p>
+    <p style="text-indent: 48px;">重复本行完成分段线性曲线定义</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=smoothstep时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）x值；2）y值</p>
+    <p style="text-indent: 48px;">重复本行完成光滑曲线定义</p>
+
+    
+
+    <p ><strong>关键字对应关系</strong></p>
+    <p ><strong>与INP：</strong></p>
+    <p style="text-indent: 32px;"><strong>MX::*function,type=linear</strong>对应<strong>INP::*AMPLITUDE,DEFINITION=TABULAR</strong>或<strong>INP::*AMPLITUDE</strong></p>
+    <p style="text-indent: 32px;"><strong>MX::*function,type=smoothstep</strong>对应<strong>INP::AMPLITUDE,DEFINITION= SMOOTH STEP</strong></p>
+    <p ><strong>与K：</strong></p>
+    <p style="text-indent: 32px;"><strong>MX::*function,type=linear</strong> 对应<strong>K::*DEFINE_CURV</strong> </p>
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*function, type = linear, name = curve1</p>
+    <p style="text-indent: 32px;">0, 0</p>
+    <p style="text-indent: 32px;">100, 0.001</p>
+    <p style="text-indent: 32px;">200, 0.001</p>
+
+</body>
+</html>

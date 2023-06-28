@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刚性墙</title>
+</head>
+<body>
+    <p><center><h2>刚性墙</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.SEVENTEEN_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.SEVENTEEN_2.png" /></center></td>
+       
+        </tr>
+    </table>
+    <br />
+    <br />
+
+ 
+    <p>刚性墙（rigidwall）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“刚性墙”图标，进入刚性墙创建栏；</p>
+    <p style="text-indent: 32px;">②刚性墙类型选择“无限大平面刚性墙”；</p>
+    <p style="text-indent: 32px;">③在法向起始坐标栏(x,y,z)输入”0,0,0”，在法向终止坐标栏(x,y,z)输入”0,12,0”，以此来定义刚性墙的法向；（注意坐标用英文逗号隔开）；</p>
+    <p style="text-indent: 32px;">④点击“确定”完成无限大平面刚性墙的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*rigidwall：定义刚性墙</strong></p>
+    <p ><strong>1.必须定义的属性设置:</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Type</strong></p>
+    
+    <p style="text-indent: 48px;">当type=planar时，定义无限大的平面刚性墙。</p>
+    <p style="text-indent: 48px;">当type=flat时，定义有限大小的平面的刚性墙。</p>
+    <p style="text-indent: 48px;">当type=prism时，定义长方体的刚性墙。</p>
+    <p style="text-indent: 48px;">当type=cylinder时，定义圆柱状的刚性墙。</p>
+
+
+
+
+
+    <p ><strong>2.可选的属性设置:</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Fun </strong></p>
+    <p style="text-indent: 48px;">fun=(curve_name)，定义刚性墙运动曲线（type!=planar）。</p>
+    <p style="text-indent: 32px;"><strong>Moving </strong></p>
+    <p style="text-indent: 48px;">当moving=velocity时，定义刚性墙的速度（type!=planar）；</p>
+    <p style="text-indent: 48px;">当moving=displacement时，定义刚性墙的位移（type!=planar）。</p>
+
+
+    <p ><strong>3.参数行</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当type=planar时：</strong></p>
+
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1.刚性墙法向的起始坐标（x, y, z），</p>
+    <p style="text-indent: 48px;">2.刚性墙的法向终止坐标（x, y, z），</p>
+    <p style="text-indent: 48px;">3.静摩擦系数，</p>
+    <p style="text-indent: 48px;">4.刚性墙在法向方向移动的速度值。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=flat时：</strong></p>
+
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1.刚性墙法向的起始坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">2.刚性墙的法向终止坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">3.静摩擦系数。</p>
+    <p style="text-indent: 48px;">第二行：</p>
+    <p style="text-indent: 48px;">4.刚性墙边向量的终止坐标（x, y, z），起始坐标与法向起始坐标相同；</p>
+    <p style="text-indent: 48px;">5.刚性墙的边长L（上一步定义的边向量所在的边）；</p>
+    <p style="text-indent: 48px;">6.刚性墙的边长M。</p>
+    <p style="text-indent: 48px;">第三行，当属性moving定义时才使用第三行：</p>
+    <p style="text-indent: 48px;">7.刚性墙运动速度或位移的方向余弦（vx, vy, vz）。</p>
+
+
+    
+    <p style="text-indent: 32px;"><strong>当type=cylinder时：</strong></p>
+
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1.刚性墙法向的起始坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">2.刚性墙的法向终止坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">3.静摩擦系数。</p>
+    <p style="text-indent: 48px;">第二行：</p>
+    <p style="text-indent: 48px;">4.半径</p>
+    <p style="text-indent: 48px;">5.轴向长度</p>
+    <p style="text-indent: 48px;">第三行，当属性moving定义时才使用第三行：</p>
+    <p style="text-indent: 48px;">6.刚性墙运动速度或位移的方向余弦（vx, vy, vz）。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=Prism时：</strong></p>
+
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">8.刚性墙法向的起始坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">9.刚性墙的法向终止坐标（x, y, z）；</p>
+    <p style="text-indent: 48px;">静摩擦系数。</p>
+    <p style="text-indent: 48px;">第二行：</p>
+    <p style="text-indent: 48px;">11.刚性墙边向量的终止坐标（x, y, z），起始坐标与法向起始坐标相同；</p>
+    <p style="text-indent: 48px;">12.长度L</p>
+    <p style="text-indent: 48px;">13.长度M</p>
+    <p style="text-indent: 48px;">14.长度P</p>
+    <p style="text-indent: 48px;">第三行，当属性moving定义时才使用第三行：</p>
+    <p style="text-indent: 48px;">刚性墙运动速度或位移的方向余弦（vx, vy, vz）</p>
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*rigidwall, type = planar</p>
+    <p style="text-indent: 32px;">0,0,0, 0,12,0,0,0</p>
+
+
+</body>
+</html>

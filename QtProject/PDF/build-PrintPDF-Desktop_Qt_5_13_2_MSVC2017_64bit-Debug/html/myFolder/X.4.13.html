@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全带材料</title>
+</head>
+<body>
+    <p><center><h2>安全带材料</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.13_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+
+
+    <p style="text-indent: 32px;">*load</p>
+    <p style="text-indent: 32px;">第一行：1）工程应变，2）应力</p>
+    <p style="text-indent: 32px;">*unload</p>
+    <p style="text-indent: 32px;">第一行：1）工程应变，2）应力</p>
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：材料类型：安全带；单位制：mm-t-s</strong></p>
+    <p style="text-indent: 32px;">*material, type = Seatbelt, name = seatbelt</p>
+    <p style="text-indent: 32px;">1e-4, 1, 0.0, 0.0</p>
+
+    <p style="text-indent: 32px;">*load</p>
+    <p style="text-indent: 32px;">0.000000, 0.000000</p>
+    <p style="text-indent: 32px;">0.100000, 100.000000</p>
+    <p style="text-indent: 32px;">*unload</p>
+    <p style="text-indent: 32px;">0.000000, 0.000000</p>
+    <p style="text-indent: 32px;">0.100000, 100.000000</p>
+   
+    <!-- <p style="text-indent: 32px;">*load</p> -->
+
+
+
+  
+ 
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.13_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+</body>
+</html>

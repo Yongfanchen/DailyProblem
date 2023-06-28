@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>气囊</title>
+</head>
+<body>
+    <p><center><h2>气囊</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.EIGHTEEN_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.EIGHTEEN_2.png" /></center></td>
+       
+        </tr>
+    </table>
+    <br />
+    <br />
+
+ 
+    <p>气囊（airbag）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“气囊”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”名称为”airbag_1”的”通用充气气囊(simple)”；</p>
+    <p style="text-indent: 32px;">③点击“选择零件集合”，在弹出窗口中选择之前创建的气囊零件集合PartSet_1；</p>
+    <p style="text-indent: 32px;">④选择之前定义好的“充气流量-时间曲线”Curve1；</p>
+    <p style="text-indent: 32px;">⑤定义通用充气气囊的相关参数（注意单位制的匹配）；</p>
+    <p style="text-indent: 32px;">⑥点击“确定”按钮，完成通用充气气囊的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+    <p ><strong>*airbag：定义气囊</strong></p>
+    <p ><strong>1.必须定义的属性设置:</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Type</strong></p>
+    
+    <p style="text-indent: 48px;">当type=PressureVolume时，定义气囊类型为  压力-体积关系气囊模型；</p>
+    <p style="text-indent: 48px;">当type=simple时，定义气囊类型为  通用充气气囊模型；</p>
+    <p style="text-indent: 48px;">当type=adiabatic时，定义气囊类型为  绝热气囊模型；</p>
+    <p style="text-indent: 48px;">当type=wang时，定义气囊类型为  王-内夫斯基气囊模型；</p>
+    <p style="text-indent: 48px;">当type=wangjetting时，定义气囊类型为  王-内夫斯基气囊喷射模型；</p>
+    <p style="text-indent: 48px;">当type=loadcurve时，定义气囊类型为  指定压力气囊模型；</p>
+    <p style="text-indent: 48px;">当type=linearfluid时，定义气囊类型为  纯液体气囊模型;</p>
+    <p style="text-indent: 48px;">当type=hybrid时，定义气囊类型为  混合气体模型；</p>
+    <p style="text-indent: 48px;">当type=hybridchemkin时，定义气囊类型为  混合气体燃烧模型；</p>
+    <p style="text-indent: 48px;">当type=fluidandgas时，定义气囊类型为  气体液体气囊；</p>
+
+    <p style="text-indent: 32px;"><strong>Set</strong></p>
+    <p style="text-indent: 48px;">定义气囊的控制体积的集合。</p>
+
+    <p ><strong>2.可选的属性设置:</strong></p>
+
+    <p style="text-indent: 32px;"><strong>Fun </strong></p>
+    <p style="text-indent: 48px;">有时会有曲线选项，来定义一些变量的关系。</p>
+
+    <p ><strong>3.参数行</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当type=PressureVolume时：</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1）压力体积关系常量，2）常量缩放系数，3）阻尼系数</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=simple时：</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1）恒定体积时的气体热容，2）恒定压力时的气体热容，3）充入气体温度，4）环境压力， 5）环境密度，6）阻尼系数</p>
+    <p style="text-indent: 48px;"> 曲线属性</p>
+    <p style="text-indent: 48px;">1）fun为充气流量与时间的曲线（必须）</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=adiabatic时：</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1）压力系数因子，2）载荷曲线（暂无，目前是输入常数），3）比热比（Cp/Cv），4）初始表压，5）环境压力，6）初始密度，7）阻尼系数 </p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=wang时：</strong></p>
+    <p style="text-indent: 48px;">第一行：</p>
+    <p style="text-indent: 48px;">1）恒定体积时的气体热容，2）恒定压力时的气体热容，3）
+        充入气体温度，4）判断选项，当tvol=0时，模型为质量流量模型；当tvol≠0时，模型为油罐体积模型，且tvol为油罐体积。 </p>
+    <p style="text-indent: 48px;">第二行:</p>
+    <p style="text-indent: 48px;">1）排气孔系数，2）为+时，为排气孔面积；为-时，由曲线来定义（暂无），3）泄露孔系数（织物孔隙率），4）泄露孔面积 </p>
+    <p style="text-indent: 48px;">第三行</p>
+    <p style="text-indent: 48px;">1）周围介质的压力，2）气体密度，3）转换重力常数，4）初始相对超压，5）启动出口流量的相对压力，6）阻尼系数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun1为充气流量与时间的曲线（必须）</p>
+    <p style="text-indent: 48px;">2）fun2为温度与时间的曲线（可选）</p>
+    <p style="text-indent: 48px;">3）fun3为漏气流量与相对压力的曲线（可选）</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=wangjetting时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）恒定体积时的气体热容，2）恒定压力时的气体热容，3）充入气体温度，4）判断选项，当tvol=0时，模型为质量流量模型；当tvol≠0时，模型为油罐体积模型，且tvol为油罐体积。</p>
+    <p style="text-indent: 48px;">第二行</p>
+    <p style="text-indent: 48px;">1）排气孔系数，2）为+时，为排气孔面积；为-时，由曲线来定义（暂无），3）泄露孔系数（织物孔隙率），4）泄露孔面积</p>
+    <p style="text-indent: 48px;">第三行</p>
+    <p style="text-indent: 48px;">1）周围介质的压力，2）气体密度，3）转换重力常数，4）初始相对超压，5）启动出口流量的相对压力，6）阻尼系数</p>
+    <p style="text-indent: 48px;">第四行</p>
+    <p style="text-indent: 48px;">1）锥角的度数（弧度），2）喷射点，3）喷射方向点</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun1为充气流量与时间的曲线（必须）</p>
+    <p style="text-indent: 48px;">2）fun2为温度与时间的曲线（可选）</p>
+    <p style="text-indent: 48px;">3）fun3为漏气流量与相对压力的曲线（可选）</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=loadcurve时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）施加压力的时间，载荷曲线被这个量偏移，2）阻尼系数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun为压力载荷与时间的曲线（必须）</p>
+
+    <p style="text-indent: 32px;"><strong>当type=linearfluid时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）液体的体积模量，2）液体的密度，3）阻尼系数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun1为流入的液体质量与时间的函数曲线（可选）</p>
+    <p style="text-indent: 48px;">2）fun2为流出的液体质量与时间的函数曲线（可选）</p>
+    <p style="text-indent: 48px;">3）fun3为流出的液体质量与压力的函数曲线（可选）</p>
+    <p style="text-indent: 48px;">4）fun4为另加的压力与时间的函数曲线（可选）</p>
+    <p style="text-indent: 48px;">5）fun4为液体的体积模量与时间的函数曲线（可选）</p>
+    <p style="text-indent: 48px;">6）fun6为压力与时间的函数曲线，直接定义压力（可选）（1 6必须有一个，不然没有位移）</p>
+
+    <p style="text-indent: 32px;"><strong>当type=hybrid时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）初始气囊气体温度，2）初始环境气体压力，3）初始气囊气体密度，4）通用摩尔气体常数
+        4）气体转换常数，5）传热系数（暂无功能 设为0）</p>
+    <p style="text-indent: 48px;">第二行</p>
+    <p style="text-indent: 48px;">1）排气孔面积，2）排气孔面积系数，3）泄气孔面积，4）泄气孔面积系数</p>
+    <p style="text-indent: 48px;">第三行</p>
+    <p style="text-indent: 48px;">1）织物排气选项（暂无功能 设为0），2）启动排气的表压，3）充入气体的个数（有几个充入气体，下面就有几个*gas子关键字），4）阻尼系数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun为充气器充入的总质量流量与时间的函数曲线（必选）</p>
+    <p style="text-indent: 48px;">2）fun1为排气孔面积与时间的函数曲线（可选/为第二行第一个替代）</p>
+    <p style="text-indent: 48px;">3）fun2为排气孔面积系数与时间的函数曲线（可选/为第二行第二个替代）</p>
+    <p style="text-indent: 48px;">4）fun3为泄气孔面积与时间的函数曲线（可选/为第二行第三个替代）</p>
+    <p style="text-indent: 48px;">5）fun4为泄气孔面积系数与时间的函数曲线（可选/为第二行第四个替代）</p>
+    
+    
+    <p style="text-indent: 48px;">当有*gas时</p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）气体的分子量，2）气体的初始摩尔分数，3）摩尔热容系数A，4）摩尔热容系数B
+        5）摩尔热容系数C，6）额外吸入的质量的分数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun1为该充入气体的摩尔分数与时间的函数（必选）</p>
+    <p style="text-indent: 48px;">2）fun2为该充入气体的温度与时间的函数（必选）</p>
+
+
+    <p style="text-indent: 48px;">当有*jetting时</p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）喷射点的x坐标，2）喷射点的y坐标，3）喷射点的z坐标，4）方向点的x坐标，5）方向点的y坐标，6）方向点的z坐标</p>
+    <p style="text-indent: 48px;">第二行</p>
+    <p style="text-indent: 48px;">1）圆锥角（弧度定义），2）效率因子，3）喷射点的id，4）方向点的id</p>
+
+
+    <p style="text-indent: 32px;"><strong>当type=hybridchemkin时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）充入气体的个数（有几个充入气体，下面就有几个*gas子关键字），2）初始气囊气体温度，3）初始环境气体压力，4）通用摩尔气体常数，5）气体转换常数，6）传热系数（暂无功能 设为0）</p>
+    <p style="text-indent: 48px;">第二行</p>
+    <p style="text-indent: 48px;">1）排气孔面积，2）泄气孔面积</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）funM为充气器充入气体的总质量流量与时间的函数曲线（必选）</p>
+    <p style="text-indent: 48px;">2）funT为充气器充入气体的温度与时间的函数曲线（必选）</p>
+    <p style="text-indent: 48px;">当有*gas时</p>
+    <p style="text-indent: 48px;">1）气体的分子量，2）气体充气的摩尔分数，3）气体初始的摩尔分数，4）摩尔热容系数A，5）摩尔热容系数B，6）摩尔热容系数C，7）摩尔热容系数D，8）摩尔热容系数E</p>
+
+    <p style="text-indent: 32px;"><strong>当type=fluidandgas时：</strong></p>
+    <p style="text-indent: 48px;">第一行</p>
+    <p style="text-indent: 48px;">1）0时刻重力方向液位坐标，2）每个时间步长加入的液位高度，3）最终时刻的液位
+        4）达到一个时刻时候的压力，5）达到一个压力时候的时刻，6）液体的密度</p>
+    <p style="text-indent: 48px;">第二行</p>
+    <p style="text-indent: 48px;">1）重力的方向，2）投影的方向，3）绝热系数，4）液体的体积模量，5）阻尼系数</p>
+    <p style="text-indent: 48px;">曲线属性</p>
+    <p style="text-indent: 48px;">1）fun1为液位与时间的函数曲线（若定义坐标，则不用选）</p>
+    <p style="text-indent: 48px;">2）fun2为气体的压力与时间函数曲线（可选）</p>
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*airbag, type = simple, set = PartSet_1, fun = curve1</p>
+    <p style="text-indent: 32px;">715, 1000, 300, 0.0001, 1.1e-09, 0</p>
+    <p style="text-indent: 32px;">*function, type = linear, name = curve1</p>
+    <p style="text-indent: 32px;">0, 0</p>
+    <p style="text-indent: 32px;">100, 0.001</p>
+    <p style="text-indent: 32px;">200, 0.001</p>
+
+
+
+</body>
+</html>

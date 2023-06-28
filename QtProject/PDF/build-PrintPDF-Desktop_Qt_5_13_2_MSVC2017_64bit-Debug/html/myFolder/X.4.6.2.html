@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜂窝材料</title>
+</head>
+<body>
+    <p><center><h2>蜂窝材料</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=Honeycomb：定义实体蜂窝材料</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.6.2_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.6.2_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <p style="text-indent: 32px;">*SigmaAA（必选）</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*SigmaBB（必选）</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*SigmaCC（必选）</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*ShearStress（若材料三轴剪应力-应变关系相同，则只需定义ShearStress，若不同，则需要单独定义</p>
+    <p style="text-indent: 32px;">下面的SigmaAB、SigmaBC、SigmaCA）</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*SigmaAB</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*SigmaBC</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+    <p style="text-indent: 32px;">*SigmaCA</p>
+    <p style="text-indent: 32px;">第一行：1）相对体积，2）屈服应力</p>
+
+
+    <br />
+    <br />
+ 
+
+    <!-- <p style="text-indent: 32px;">*yieldcurve（必选）</p>
+    <p style="text-indent: 32px;">第一行：1）损伤累计参数，2）插值缩放系数</p>
+    <p style="text-indent: 32px;">*PrincipalMaterialVSStrainRate</p>
+    <p style="text-indent: 32px;">第一行：1）应变率，2）主材料系数</p>
+    <p style="text-indent: 32px;">*ReinforcementVSStrainRate</p>
+    <p style="text-indent: 32px;">第一行：1）应变率，2）强化系数</p> -->
+    <!-- <p style="text-indent: 32px;">Mx文件示例：材料类型：C30混凝土；单位制：mm-t-s</p>
+    <p style="text-indent: 32px;">Mx文件示例：材料类型：C30混凝土；单位制：mm-t-s</p> -->
+    <!-- <p style="text-indent: 32px;">*plastic：用于定义分段线性塑性的硬化曲线</p> -->
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：材料类型：实体蜂窝铝；单位制：mm-kg-ms</strong></p>
+    <p style="text-indent: 32px;">*material, type = Honeycomb, name = bumperglue</p>
+    <p style="text-indent: 32px;">1.000e-06, 2.000e-01,0.30,0.2,0.1,0.05,0.950,0.440</p>
+    <p style="text-indent: 32px;">2.000e-01,2.000e-01,2.000e-01,1.000e-01,1.000e-01,1.000e-01</p>
+    <p style="text-indent: 32px;">*SigmaAA</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">*SigmaBB</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">*SigmaCC</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.5740001000e-04</p>
+    <p style="text-indent: 32px;">*SigmaAB</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.2400002000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.2400002000e-04</p>
+    <p style="text-indent: 32px;">*SigmaBC</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.2400002000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.2400002000e-04</p>
+    <p style="text-indent: 32px;">*SigmaCA</p>
+    <p style="text-indent: 32px;">0.0000000000e+00, 2.2400002000e-04</p>
+    <p style="text-indent: 32px;">9.9900103000e-01, 2.2400002000e-04</p>
+    <!-- <p style="text-indent: 32px;">0.001, 0.5, 230000, -593000, 2.8e+06, 1</p> -->
+
+
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.6.2_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+</body>
+</html>

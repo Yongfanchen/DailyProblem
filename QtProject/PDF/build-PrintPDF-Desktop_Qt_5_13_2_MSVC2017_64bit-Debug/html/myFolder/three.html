@@ -1,0 +1,178 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>网格划分</title>
+        <link rel="stylesheet" href="./spuerlink.css">
+        <!-- <style>
+            p{
+                text-indent: 32px;
+            }
+        </style> -->
+    </head>
+    <body style="font-size:12pt;font-family:helvetica">
+
+        <p><center><h2>网格划分</h2></center></p>
+
+        <p >
+            针对不同的单元类型，选择对应的网格类型进行网格剖分，
+            在MxSim软件中，不但可以直接创建节点、网格，也可以针对1D、2D单元和3D单元进行线剖分、面剖分和实体剖分。
+            除基础的网格生成功能外 ，目前支持提取表面网格，粒子生成，线拉伸，旋转，拉伸等辅助功能。
+            目前支持的有：<a href="#1">线剖分</a>、<a href="#2">面剖分</a>、<a href="#3">实体剖分</a>、
+                                                                                           <a href="#4">局部网格控制</a>、<a href="#5">创建节点</a>、
+                                                                                                                   <a href="#6">创建网格</a>、<a href="#7">提取表面网格</a>、<a href="#8">粒子生成</a> 和<a href="#9">拉伸</a>。
+
+        </p>
+
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/three.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+
+
+
+        <p id="1"><center><h3>线剖分</h3></center></p>
+        <p>
+            用于一维的杆、桁架、梁等进行剖分，也可用于对三维体和二维板壳单元的局部线进行局部控制。选择需要剖分的几何线。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.1.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="2"><center><h3>面剖分</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;划分二维平面单元，用于分析平面问题。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.2.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="3"><center><h3>实体剖分</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对三维实体或已有的3D实体网格进行实体剖分，生成或修改实体单元。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.3.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="4"><center><h3>局部网格控制</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进行实体网格剖分时，默认的网格尺寸设置为全局尺寸，即剖分出的网格尺寸均匀且一致，目前暂无法自动对零部件的局部网格疏密调整。线/面网格初步剖分完成后，可手动对几何边或几何面的网格进行调整。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.4.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="5"><center><h3>创建节点</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在网格窗口，输入坐标值创建节点生成节点。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.5.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="6"><center><h3>创建网格</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在网格窗口，通过输入坐标值或选取已有节点，创建并生成相应的网格部件（1D线网格、2D三角形/四边形网格、3D四面体/四棱锥/四棱柱/六面体网格）。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.6.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="7"><center><h3>提取表面网格</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在网格窗口，可以通过对面或零件的选择快速提取表面网格。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.7.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="8"><center><h3>粒子生成</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在网格窗口，可以快速选择节点并生成颗粒。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.8.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <p id="9"><center><h3>拉伸</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过沿某矢量方向拉伸跟面关联的网格生成实体网格。<br />
+
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/3.9.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+    </body>
+</html>
+

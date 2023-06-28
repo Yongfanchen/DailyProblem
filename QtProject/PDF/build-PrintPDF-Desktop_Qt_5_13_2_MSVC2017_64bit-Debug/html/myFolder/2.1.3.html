@@ -1,0 +1,155 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>创建几何面</title>
+    </head>
+    <body style="font-size:12pt;font-family:helvetica">
+
+        <p><center><h2>创建几何面</h2></center></p>
+
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在MxSim的几何菜单中，也可以通过已有点、已有线或坐标等参数快速的创建简单几何面，
+            如
+            <a href="#1">平面</a>
+            、<a href="#2">圆柱面</a>
+            、<a href="#3">圆台面</a>
+            、<a href="#4">球面</a>
+            、<a href="#5">圆环面</a>
+            ，也可以通过拉伸或扫略的方式生成<a href="#6">旋转面</a>、<a href="#7">拉伸面</a>或者<a href="#8">填充面</a>等等。
+        </p>
+
+        <p id="1"><center><h3>几何平面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过正方形几何中心、边长和法向来创建正方向面。
+            基准点默认位置（0，0，0）。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.1.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+
+        <p id="2"><center><h3>圆柱面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过底面圆心位置、半径和高度来构建几何圆柱面/部分圆柱面。
+            底面圆心默认位置（0，0，0），顶面圆心默认位置（0，0，10），也可拾取已有节点。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.2.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="3"><center><h3>圆台面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过顶面圆、底面圆和高度矢量来构建圆台面。
+            底面圆心默认位置（0，0，0），顶面圆心默认位置（0，0，10），主半径方向点默认位置（0，10，10），也可通过拾取已有节点。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.3.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="4"><center><h3>球面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过球心坐标和球半径创建圆球面。
+            球心默认位置（0，0，0）。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.4.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="5"><center><h3>圆环面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过中心点、方向和主、副半径值创建圆环面。
+            底面圆心（主圆心）默认位置（0，0，0），顶面圆心默认位置（0，0，10），副圆心默认位置（0，0，10），
+            副半径默认位置（0，2，10），起始平面向量点默认位置（0，10，10），也可拾取已创建节点。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.5.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="6"><center><h3>旋转面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绕轴线旋转已有几何线或2节点生成几何面。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.6.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="7"><center><h3>拉伸面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;沿法向拉伸已有几何线或2节点（2点线）成面。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.7.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <p id="8"><center><h3>填充面</h3></center></p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过几何点、几何线或者网格节点来构建填充面。
+        </p>
+        <br />
+        <br />
+        <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+            <tr valign="top"   >
+                <td><center><img src="images/2.1.3.8.png" /></center></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+       
+
+        <br />
+        <br />
+
+    </body>
+</html>
+

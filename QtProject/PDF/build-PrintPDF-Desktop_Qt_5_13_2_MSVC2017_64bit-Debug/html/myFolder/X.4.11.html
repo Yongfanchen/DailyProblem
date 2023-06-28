@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炸药</title>
+</head>
+<body>
+    <p><center><h2>炸药</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <p style="text-indent: 32px;">Type=HighExplosiveBurn：定义高爆燃材料,必选状态方程</p>
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.11_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <!-- <p style="text-indent: 32px;">Eos:当type=Gruneisen</p> -->
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;"><strong>Eos:type=JWL:定义JWL状态方程</strong></p>
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.11_2.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.11_3.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    <p style="text-indent: 32px;"><strong>Mx文件示例：材料类型：TNT炸药；单位制：m-kg-s</strong></p>
+    <p style="text-indent: 32px;">*material, type = HighExplosiveBurn, name = TNT</p>
+    <p style="text-indent: 32px;">1.74e+03, 6.93e+03, 2.1e+10, 0</p>
+    <p style="text-indent: 32px;">*eqos, type= JWL</p>
+    <p style="text-indent: 32px;">3.71e+11, 3.23e+09, 4.15e+00, 9.5e-01, 3.0e-01</p>
+    <p style="text-indent: 32px;">7.0e+09, 1.0e+00</p>
+
+    <br />
+    <br />
+    <table  cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.4.11_4.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁单元</title>
+</head>
+<body>
+    <p><center><h2>梁单元</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.1_1.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.1_2.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.6.1_3.png" /></center></td>
+            
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <p>积分梁(Hughes-Liu)单元定义和关联步骤（对应上图）</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“单元”图标；</p>
+    <p style="text-indent: 32px;">②点击“梁”进入单元选择窗口；</p>
+    <p style="text-indent: 32px;">③点击选择“HB2”单元；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键框选梁单元，可以看到梁单元高亮显式；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成单元信息的关联。</p>
+
+
+    
+ 
+    <p ><strong>关键字说明：</strong></p>
+    <p style="text-indent: 32px;"><strong>当type=TS2时，用于定义可拉可压杆单元（桁架单元），共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+        重复此行完成杆单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=BS2时，用于定义Belytschko-Schwer梁单元，共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+        重复此行完成梁单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=HB2时，用于定义HL梁单元，共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+            重复此行完成梁单元部件定义。</p>
+
+    <p style="text-indent: 32px;"><strong>当type=DB2时，用于定义离散梁单元（Link单元），共三个节点</strong></p>
+    <p style="text-indent: 32px;">第一行：1）单元编号，2）节点编号1，3）节点编号2，4）节点编号3
+                重复此行完成梁单元部件定义。</p>
+
+
+
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*element, type = HB2, part = Beam6, section = intbeam_PID6</p>
+    <p style="text-indent: 32px;">2007,            2619,            1298, 1177</p>
+
+
+    
+</body>
+</html>

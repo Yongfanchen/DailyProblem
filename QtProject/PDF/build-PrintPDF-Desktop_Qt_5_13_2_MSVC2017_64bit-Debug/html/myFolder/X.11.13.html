@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>齿轮-齿条传动</title>
+</head>
+<body>
+    <p><center><h2>齿轮-齿条传动</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.13_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.13_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>齿轮-齿条传动（RackPinionJoint）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“齿轮-齿条传动”；</p>
+    <p style="text-indent: 32px;">④依次定义节点1~节点6，其中节点1、节点3及节点5从属于PART-A（齿轮），节点2、节点4及节点6从属于PART-B（齿条），节点1、3定义齿轮的法向，节点2、6定义齿条平面法向，节点2、4定义齿条的移动方向，节点1、5定义齿轮所在平面。这样方可实现PART-A和PART-B的齿轮-齿条传动连接定义；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，完成齿轮-齿条传动的定义。</p>
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=RackPinionJoint时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点1，2）节点2，3）节点3，4）节点4，5）节点5，6）节点6，7）阻尼因子（默认值1.0），8）罚因子调整项（默认值1.0）；
+</p>
+    <p style="text-indent: 48px;">第二行：1）齿轮分度圆半径。</p>
+    
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = RackPinionJoint</p>
+    <p style="text-indent: 32px;">7300, 7301, 7304, 7303, 7302, 7305, 1.000000,1.000000</p>
+    <p style="text-indent: 32px;">100.000000</p>
+
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part3, nset20</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = extranode</p>
+    <p style="text-indent: 32px; color: blue;" >part4, nset21</p>
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset20</p>
+    <p style="text-indent: 32px; color: blue;" >7300, 7304, 7302</p>
+    <p style="text-indent: 32px; color: blue;" >*set,type = node, name = nset21</p>
+    <p style="text-indent: 32px; color: blue;" >7303, 7305, 7301</p>
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+ 
+</body>
+</html>

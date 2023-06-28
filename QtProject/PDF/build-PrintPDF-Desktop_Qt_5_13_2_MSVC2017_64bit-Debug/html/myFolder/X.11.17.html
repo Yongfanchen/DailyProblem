@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面面绑定</title>
+</head>
+<body>
+    <p><center><h2>面面绑定</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.17_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.17_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>面面绑定（Tie）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“面面绑定”；</p>
+    <p style="text-indent: 32px;">④分别定义主/从面，定义方式可以选择“基于模型”的定义方式，此时需要确定单元为二维网格还是三维网格，Shift+鼠标左键选择目标面网格作为主/从面。也可以采用“基于已有面”的定义方式，点击“选择面”，在弹出窗口中选择之前定义的面即可；</p>
+    <p style="text-indent: 32px;">⑤定义好主/从面后，点击“确定”按钮，完成对面面绑定的定义。</p>
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=tie时:</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）从面，2）主面，3）容差
+</p>
+   
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = tie</p>
+    <p style="text-indent: 32px;">SegSet_2, SegSet_3,0</p>
+
+
+
+    <!-- <p style="text-indent: 32px; color: blue;" >1e+20,10,10,10,100,10,70,45</p>
+    <p style="text-indent: 32px; color: blue;" >*connector, type = genfilletweld</p>
+    <p style="text-indent: 32px; color: blue;" >connect_Set_16</p>
+    <p style="text-indent: 32px; color: blue;" >1e+20,10,10,10,100,10,70,45</p>
+    
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = connect_Set_13</p>
+    <p style="text-indent: 32px; color: blue;" >2553,1232</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = connect_Set_16</p>
+    <p style="text-indent: 32px; color: blue;" >2641,1320</p>
+
+
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p> -->
+
+ 
+</body>
+</html>

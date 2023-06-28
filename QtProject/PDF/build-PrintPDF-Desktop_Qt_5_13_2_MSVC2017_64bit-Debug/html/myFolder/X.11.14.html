@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对接焊缝</title>
+</head>
+<body>
+    <p><center><h2>对接焊缝</h2></center></p>
+    <!-- <p style="text-indent: 32px; font-size: 20px; font-weight: bolder;" >Type=isolinearelastic：定义各向同性线弹性材料</p> -->
+    <!-- <p style="text-indent: 32px;">Type=Seatbelt：用于定义安全带</p> -->
+
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.14_1.png" /></center></td>
+            
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table align="center" cellpadding="2" cellspacing="1"   width="100%">
+        <tr valign="top"   >
+            <td><center><img src="images/X.11.14_2.png" /></center></td>  
+        </tr>
+    </table>
+    <br />
+    <br />
+ 
+    <p>对接焊缝（ButtWeld）的定义（对应上图）：</p>
+   
+    <p style="text-indent: 32px;">①主功能工具栏点击“连接”图标；</p>
+    <p style="text-indent: 32px;">②点击“新建”连接；</p>
+    <p style="text-indent: 32px;">③连接类型选择“对接焊缝”；</p>
+    <p style="text-indent: 32px;">④Shift+鼠标左键依次点选定义主、从节点，对接焊缝要求主、从节点坐标相同，L等于沿焊缝方向相邻节点距离，D为壳体厚度；</p>
+    <p style="text-indent: 32px;">⑤点击“确定”按钮，逐一完成对接焊缝的定义。
+    </p>
+
+
+
+
+
+    
+    <p ><strong>关键字说明：</strong></p>
+
+    <p style="text-indent: 32px;"><strong>当Type=GenButtWeld时：</strong></p>
+    
+    <p style="text-indent: 48px;">第一行：1）节点集合。
+</p>
+    <p style="text-indent: 48px;">第二行：1）失效时间，2）塑性失效的节点有效塑性应变阈值，3）脆性失效的失效应力阈值（失效应力），4）增强或削弱焊缝的参数（失效因子），5）焊缝长度，6）焊缝的厚度</p>
+    
+
+    <p style="text-indent: 32px;"> <strong>Mx文件示例：</strong></p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset21</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset23</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset25</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+    <p style="text-indent: 32px;">*connector, type = genbuttweld</p>
+    <p style="text-indent: 32px;">nset27</p>
+    <p style="text-indent: 32px;">0,0.3,0.25,0.9,10,2</p>
+
+
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset21</p>
+    <p style="text-indent: 32px; color: blue;" > 21,      33</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset23</p>
+    <p style="text-indent: 32px; color: blue;" > 23,      35</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset25</p>
+    <p style="text-indent: 32px; color: blue;" >25,      37</p>
+    <p style="text-indent: 32px; color: blue;" >*set, type = node, name = nset27</p>
+    <p style="text-indent: 32px; color: blue;" > 27,      39</p>
+ 
+    <p style="text-indent: 32px;">（蓝色部分为集合，详集合定义章节）</p>
+
+ 
+</body>
+</html>
