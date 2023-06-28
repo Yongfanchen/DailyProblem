@@ -130,10 +130,8 @@ int findShortestSubArray(vector<int> &nums)
 {
 	unordered_map<int, vector<int>> map;
 	int n = nums.size();
-	for (int i = 0; i < n; i++)
-	{
-		if (map.count(nums[i]))
-		{
+	for (int i = 0; i < n; i++) {
+		if (map.count(nums[i])) {
 			map[nums[i]][0]++;
 			map[nums[i]][2] = i;
 		}
@@ -141,17 +139,14 @@ int findShortestSubArray(vector<int> &nums)
 			map[nums[i]] = vector<int>{1,i,i};
 	}
 	int maxNum = 0, minLen = 0;
-	for (auto &pair : map)
-	{
+	for (auto &pair : map) {
 		int key = pair.first;
 		vector<int> & vec = pair.second;
-		if (maxNum < vec[0])
-		{
+		if (maxNum < vec[0]) {
 			maxNum = vec[0];
 			minLen = vec[2] - vec[1] + 1;
 		}
-		else if (maxNum == vec[0])
-		{
+		else if (maxNum == vec[0]) {
 			if (minLen > vec[2] - vec[1] + 1)
 				minLen = vec[2] - vec[1] + 1;
 		}
