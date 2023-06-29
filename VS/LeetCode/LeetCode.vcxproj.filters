@@ -42,5 +42,11 @@
     <ClCompile Include="MyHashMap.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="isDividingNum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="floodFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

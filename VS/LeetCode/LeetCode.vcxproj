@@ -129,7 +129,9 @@
     <ClCompile Include="findRestaurant.cpp" />
     <ClCompile Include="findShortestSubArray.cpp" />
     <ClCompile Include="findTilt.cpp" />
+    <ClCompile Include="floodFill.cpp" />
     <ClCompile Include="hashset.cpp" />
+    <ClCompile Include="isDividingNum.cpp" />
     <ClCompile Include="isSameTree.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
   </ItemGroup>

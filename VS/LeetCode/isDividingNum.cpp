@@ -11,15 +11,18 @@ class Solution {
 public:
 	bool isDividingNum(int n)
 	{
+		int n1 = n;
 		vector<int> res;
 		while (n > 0) {
 			int temp = n % 10;
 			if (temp != 0)
 				res.emplace_back(temp);
+			else
+				return false;
 			n = n / 10;
 		}
 		for (int i = 0; i < res.size(); i++) {
-			if (n % res[i] != 0)
+			if (n1 % res[i] != 0)
 				return false;
 		}
 		return true;
@@ -34,3 +37,10 @@ public:
 		return res;
 	}
 };
+
+int main()
+{
+	Solution s;
+	vector<int> res = s.selfDividingNumbers(1, 22);
+	return 0;
+}
