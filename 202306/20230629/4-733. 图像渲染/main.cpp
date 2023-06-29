@@ -72,7 +72,6 @@ public:
                 }
             }
         }
-
         return image;
     }
 };

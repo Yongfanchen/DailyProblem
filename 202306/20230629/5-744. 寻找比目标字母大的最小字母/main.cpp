@@ -12,5 +12,22 @@ class Solution
 public:
     char nextGreatestLetter(vector<char> &letters, char target)
     {
+        char res = 'z';
+        bool isModyfy = false;
+        for (auto &letter : letters)
+        {
+            if (letter > target)
+            {
+                isModyfy = true;
+                if (letter < res)
+                {
+                    res = letter;
+                }
+            }
+        }
+        if (isModyfy)
+            return res;
+        else
+            return letters[0];
     }
 };
