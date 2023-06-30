@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="averageOfLevels.cpp" />
     <ClCompile Include="canPlaceFlowers.cpp" />
+    <ClCompile Include="countPrimeSetBits.cpp" />
     <ClCompile Include="findMaxAverage.cpp" />
     <ClCompile Include="findRestaurant.cpp" />
     <ClCompile Include="findShortestSubArray.cpp" />
@@ -133,7 +134,9 @@
     <ClCompile Include="hashset.cpp" />
     <ClCompile Include="isDividingNum.cpp" />
     <ClCompile Include="isSameTree.cpp" />
+    <ClCompile Include="isToeplitzMatrix.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
+    <ClCompile Include="shortestCompletingWord.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

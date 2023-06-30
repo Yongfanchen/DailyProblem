@@ -7,9 +7,17 @@
 #include <vector>
 #include <unordered_set>
 using namespace std;
-class Solution {
+class Solution
+{
 public:
-    int numJewelsInStones(string jewels, string stones) {
-
+    int numJewelsInStones(string jewels, string stones)
+    {
+        int sum = 0;
+        for (auto &stone : stones)
+        {
+            if (count(jewels.begin(), jewels.end(), stone))
+                sum++;
+        }
+        return sum;
     }
 };

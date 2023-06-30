@@ -38,9 +38,9 @@ public:
 	}
 };
 
-int main()
-{
-	Solution s;
-	vector<int> res = s.selfDividingNumbers(1, 22);
-	return 0;
-}
+//int main()
+//{
+//	Solution s;
+//	vector<int> res = s.selfDividingNumbers(1, 22);
+//	return 0;
+//}
