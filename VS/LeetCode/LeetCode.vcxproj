@@ -123,11 +123,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="allCellsDistOrder.cpp" />
     <ClCompile Include="averageOfLevels.cpp" />
     <ClCompile Include="canPlaceFlowers.cpp" />
+    <ClCompile Include="checkXMatrix.cpp" />
+    <ClCompile Include="countNegatives.cpp" />
     <ClCompile Include="countPrimeSetBits.cpp" />
+    <ClCompile Include="diagonalSum.cpp" />
     <ClCompile Include="findMaxAverage.cpp" />
     <ClCompile Include="findRestaurant.cpp" />
+    <ClCompile Include="findRotation.cpp" />
     <ClCompile Include="findShortestSubArray.cpp" />
     <ClCompile Include="findTilt.cpp" />
     <ClCompile Include="floodFill.cpp" />
@@ -135,8 +140,19 @@
     <ClCompile Include="isDividingNum.cpp" />
     <ClCompile Include="isSameTree.cpp" />
     <ClCompile Include="isToeplitzMatrix.cpp" />
+    <ClCompile Include="kWeakestRows.cpp" />
+    <ClCompile Include="largestLocal.cpp" />
+    <ClCompile Include="luckyNumbers.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
+    <ClCompile Include="numSpecial.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
+    <ClCompile Include="transpose.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LeetCode.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

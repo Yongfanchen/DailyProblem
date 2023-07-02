@@ -46,10 +46,10 @@ public:
 	}
 };
 
-int main()
-{
-	Solution s;
-	int count = s.countPrimeSetBits(6, 10);
-	int i = 0;
-	return 0;
-}
+//int main()
+//{
+//	Solution s;
+//	int count = s.countPrimeSetBits(6, 10);
+//	int i = 0;
+//	return 0;
+//}
