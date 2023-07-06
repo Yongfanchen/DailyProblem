@@ -9,8 +9,8 @@
 #include <set>
 #include <array>
 using namespace std;
-// Definition for singly-linked list.
 
+// Definition for singly-linked list.
 struct ListNode
 {
     int val;
@@ -23,7 +23,7 @@ struct ListNode
 class Solution
 {
 public:
-    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
+    ListNode *swapPairs(ListNode *head)
     {
     }
 };
