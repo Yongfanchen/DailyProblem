@@ -14,5 +14,16 @@ class Solution
 public:
     int lengthOfLongestSubstring(string s)
     {
+        int n = s.length();
+        int maxN = INT_MIN;
+        int left = 0;
+        while (left < n)
+        {
+            for (int i = left; i < n; i++)
+            {
+                string temp = s.substr(left, i - left);
+                // if (temp)
+            }
+        }
     }
 };
