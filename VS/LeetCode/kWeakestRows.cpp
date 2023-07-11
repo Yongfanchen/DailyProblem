@@ -42,11 +42,11 @@ public:
 };
 
 
-int main()
-{
-	Solution s;
-	vector<vector<int>> res1 = {{1,1,0,0,0}, {1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
-	vector<int>res = s.kWeakestRows(res1, 3);
-	//int  res = s.numSpecial(res1);
-	return 0;
-}
+//int main()
+//{
+//	Solution s;
+//	vector<vector<int>> res1 = {{1,1,0,0,0}, {1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
+//	vector<int>res = s.kWeakestRows(res1, 3);
+//	//int  res = s.numSpecial(res1);
+//	return 0;
+//}

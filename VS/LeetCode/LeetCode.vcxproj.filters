@@ -87,6 +87,27 @@
     <ClCompile Include="kWeakestRows.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="checkValid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="oddCells.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="deleteGreatestValue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findColumnWidth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rowAndMaximumOnes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="flipAndInvertImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="minimumSwitchingTimes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

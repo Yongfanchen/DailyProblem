@@ -126,15 +126,19 @@
     <ClCompile Include="allCellsDistOrder.cpp" />
     <ClCompile Include="averageOfLevels.cpp" />
     <ClCompile Include="canPlaceFlowers.cpp" />
+    <ClCompile Include="checkValid.cpp" />
     <ClCompile Include="checkXMatrix.cpp" />
     <ClCompile Include="countNegatives.cpp" />
     <ClCompile Include="countPrimeSetBits.cpp" />
+    <ClCompile Include="deleteGreatestValue.cpp" />
     <ClCompile Include="diagonalSum.cpp" />
+    <ClCompile Include="findColumnWidth.cpp" />
     <ClCompile Include="findMaxAverage.cpp" />
     <ClCompile Include="findRestaurant.cpp" />
     <ClCompile Include="findRotation.cpp" />
     <ClCompile Include="findShortestSubArray.cpp" />
     <ClCompile Include="findTilt.cpp" />
+    <ClCompile Include="flipAndInvertImage.cpp" />
     <ClCompile Include="floodFill.cpp" />
     <ClCompile Include="hashset.cpp" />
     <ClCompile Include="isDividingNum.cpp" />
@@ -143,8 +147,11 @@
     <ClCompile Include="kWeakestRows.cpp" />
     <ClCompile Include="largestLocal.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
+    <ClCompile Include="minimumSwitchingTimes.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
     <ClCompile Include="numSpecial.cpp" />
+    <ClCompile Include="oddCells.cpp" />
+    <ClCompile Include="rowAndMaximumOnes.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
     <ClCompile Include="transpose.cpp" />
   </ItemGroup>
