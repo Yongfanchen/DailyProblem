@@ -24,7 +24,7 @@ public:
 		int t = t * 2 - 2;//计算周期
 		int c = (n + t - 1) / t * (r - 1);  //计算多少列
 		vector<string> mat(r, string(c, 0));
-		for(int i =0,x=0,y=0;)
+		//for(int i =0,x=0,y=0;)
 
 	}
 };

@@ -142,6 +142,7 @@
     <ClCompile Include="flipAndInvertImage.cpp" />
     <ClCompile Include="floodFill.cpp" />
     <ClCompile Include="hashset.cpp" />
+    <ClCompile Include="intToRoman.cpp" />
     <ClCompile Include="isDividingNum.cpp" />
     <ClCompile Include="isSameTree.cpp" />
     <ClCompile Include="isToeplitzMatrix.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="largestLocal.cpp" />
     <ClCompile Include="lengthOfLongestSubstring.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
+    <ClCompile Include="maxArea.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
     <ClCompile Include="myAtoi.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
