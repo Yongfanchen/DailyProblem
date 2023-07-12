@@ -128,6 +128,7 @@
     <ClCompile Include="canPlaceFlowers.cpp" />
     <ClCompile Include="checkValid.cpp" />
     <ClCompile Include="checkXMatrix.cpp" />
+    <ClCompile Include="convert.cpp" />
     <ClCompile Include="countNegatives.cpp" />
     <ClCompile Include="countPrimeSetBits.cpp" />
     <ClCompile Include="deleteGreatestValue.cpp" />
@@ -146,11 +147,14 @@
     <ClCompile Include="isToeplitzMatrix.cpp" />
     <ClCompile Include="kWeakestRows.cpp" />
     <ClCompile Include="largestLocal.cpp" />
+    <ClCompile Include="lengthOfLongestSubstring.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
+    <ClCompile Include="myAtoi.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
     <ClCompile Include="numSpecial.cpp" />
     <ClCompile Include="oddCells.cpp" />
+    <ClCompile Include="reverse.cpp" />
     <ClCompile Include="rowAndMaximumOnes.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
     <ClCompile Include="transpose.cpp" />

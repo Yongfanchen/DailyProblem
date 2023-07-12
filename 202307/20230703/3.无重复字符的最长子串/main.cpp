@@ -14,16 +14,20 @@ class Solution
 public:
     int lengthOfLongestSubstring(string s)
     {
-        int n = s.length();
-        int maxN = INT_MIN;
+        int size = s.length();
+        unordered_set<char> temp;
+        int maxStr = 0;
         int left = 0;
-        while (left < n)
+        for (int i = 0; i < size; i++)
         {
-            for (int i = left; i < n; i++)
+            while (temp.find(s[i]) != temp.end())
             {
-                string temp = s.substr(left, i - left);
-                // if (temp)
+                temp.erase(s[left]);
+                left++;
             }
+            maxStr = max(maxStr, i - left + 1);
+            temp.insert(s[i]);
         }
+        return maxStr;
     }
 };

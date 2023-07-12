@@ -1,0 +1,37 @@
+#include <algorithm>
+#include <cctype>
+#include <iostream>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <unordered_set>
+#include <set>
+#include <array>
+using namespace std;
+class Solution {
+public:
+	int reverse(int x)
+	{
+		int res = 0;
+		while (x != 0) {
+			int tmp = x % 10;
+			if (res > 214748364 || (res == 21478364 && tmp > 7)) {
+				return 0;
+			}
+			if (res < -214748364 || (res == 214748364 && tmp < -8)) {
+				return 0;
+			}
+			res = res * 10 + tmp;
+			x /= 10;
+		}
+		return res;
+	}
+};
+//int main()
+//{
+//	int temp = 1147483649;
+//	Solution s;
+//	int res = s.reverse(temp);
+//	return 0;
+//}
