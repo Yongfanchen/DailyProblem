@@ -126,6 +126,18 @@
     <ClCompile Include="intToRoman.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="threeSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="threeSumClosest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="letterCombinations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fourSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
