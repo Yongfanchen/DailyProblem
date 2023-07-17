@@ -159,6 +159,7 @@
     <ClCompile Include="reverse.cpp" />
     <ClCompile Include="rowAndMaximumOnes.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
+    <ClCompile Include="threeSum.cpp" />
     <ClCompile Include="transpose.cpp" />
   </ItemGroup>
   <ItemGroup>
