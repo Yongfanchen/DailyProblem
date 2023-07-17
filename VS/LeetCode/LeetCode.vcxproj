@@ -141,6 +141,7 @@
     <ClCompile Include="findTilt.cpp" />
     <ClCompile Include="flipAndInvertImage.cpp" />
     <ClCompile Include="floodFill.cpp" />
+    <ClCompile Include="fourSum.cpp" />
     <ClCompile Include="hashset.cpp" />
     <ClCompile Include="intToRoman.cpp" />
     <ClCompile Include="isDividingNum.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="kWeakestRows.cpp" />
     <ClCompile Include="largestLocal.cpp" />
     <ClCompile Include="lengthOfLongestSubstring.cpp" />
+    <ClCompile Include="letterCombinations.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
     <ClCompile Include="maxArea.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
@@ -160,6 +162,7 @@
     <ClCompile Include="rowAndMaximumOnes.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
     <ClCompile Include="threeSum.cpp" />
+    <ClCompile Include="threeSumClosest.cpp" />
     <ClCompile Include="transpose.cpp" />
   </ItemGroup>
   <ItemGroup>
