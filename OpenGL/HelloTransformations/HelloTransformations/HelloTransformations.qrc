@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/HelloTransformations"/>
+    <qresource prefix="/">
+        <file>face.bmp</file>
+        <file>Texture.bmp</file>
+    </qresource>
+</RCC>
