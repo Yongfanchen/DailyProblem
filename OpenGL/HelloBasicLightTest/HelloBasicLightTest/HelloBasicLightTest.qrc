@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/HelloBasicLightTest"/>
+    <qresource prefix="/">
+        <file>Texture.jpg</file>
+        <file>Texture2.jpg</file>
+    </qresource>
+</RCC>
