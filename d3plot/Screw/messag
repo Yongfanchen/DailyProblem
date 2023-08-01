@@ -1,0 +1,381 @@
+      Date: 10/24/2021      Time: 14:46:57  
+
+     ___________________________________________________
+     |                                                 |
+     |  Livermore  Software  Technology  Corporation   |
+     |                                                 |
+     |  7374 Las Positas Road                          |
+     |  Livermore, CA 94551                            |
+     |  Tel: (925) 449-2500  Fax: (925) 449-2507       |
+     |  www.lstc.com                                   |
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : smp s R7.0.0    Date: 01/10/2013     |
+     |  Revision: 79055           Time: 16:39:15       |
+     |                                                 |
+     |  Features enabled in this version:              |
+     |    Shared Memory Parallel                       |
+     |    Interactive Graphics                         |
+     |    ANSYS Database format                        |
+     |    NSYS License (ANSYS145)                      |
+     |                                                 |
+     |  Licensed to: LND-7330757468@CS                 |
+     |                                                 |
+     |  Platform   : WINDOWS X64                       |
+     |  OS Level   : Windows XP/Vista/7 SRV 2003/2008  |
+     |  Compiler   : Intel Fortran 10.1 & MSVC++ 2008  |
+     |  Hostname   : DESKTOP-4PAHJR5                   |
+     |  Precision  : Single precision (I4R4)           |
+     |  SVN Version: 79069                             |
+     |                                                 |
+     |  Unauthorized use infringes LSTC copyrights     |
+     |_________________________________________________|
+
+ Input file: D:\Source_code\solve_examples\Screw_joint\screw_joint_dyna_new\screw_joi
+
+
+ The native file format       : 32-bit small endian
+ Memory size from default     :    20000000
+ expanding   memory to    20000000 starting ls-dyna
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LSTC nor the authors assume any responsibility for *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. The user must verify his own    *
+ * results.                                                   *
+ *                                                            *
+ * LSTC endeavors to make the LS-DYNA code as complete,       *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LSTC through your site focus.               *
+ *                                                            *
+ * Copyright (C) 1990-2013                                    *
+ * by Livermore Software Technology Corp. (LSTC)              *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+
+ Beginning of keyword reader                                   10/24/21 14:46:57
+ contracting memory to           1 beginning of keyword reader
+ expanding   memory to       22120  
+ expanding   memory to       43248  
+ expanding   memory to      129432  
+ expanding   memory to      159432  
+ expanding   memory to      219432  
+ expanding   memory to      239986  
+ expanding   memory to      266070  
+ expanding   memory to      289534  
+ expanding   memory to      310494  
+ expanding   memory to      367390  
+ expanding   memory to      387774  
+ expanding   memory to      409934  
+
+ Memory required to process keyword     :       409934
+ contracting memory to           1 end of keyword reader
+
+ LS-DYNA will perform a structural only analysis 
+
+ test_screw_joint                                                        
+                         ls-dyna smp.79055 s            date 01/10/2013
+ expanding   memory to        2940 material, node and element data
+ expanding   memory to        3050 material added airbag porosity leakage 
+ contracting memory to        3050 material properties
+ expanding   memory to       17212 element data for composite material
+ expanding   memory to       25068 gradient of damage data
+ expanding   memory to       29089 user control for contact interfaces
+ contracting memory to       29069 for boundary cond. vectorization
+ expanding   memory to       30213 arbitrary element numbering input
+ contracting memory to       29069 thick shell int. pt. strain
+ expanding   memory to       33811 process element material data
+ expanding   memory to       35817 load curve data
+ contracting memory to       34263 user_define_loading_set
+ expanding   memory to       34467 regularize time history data
+ contracting memory to       34263 rigidwall definitions
+ expanding   memory to       37460 nodal constraint sets
+ expanding   memory to       45621 contact interfaces
+ expanding   memory to       49757 implicit contact 1
+ contracting memory to       46621 contact segment data 1
+ expanding   memory to       60477 contact segment data 3
+ contracting memory to       47189 contact definition
+ expanding   memory to       53795 rigid body
+ expanding   memory to       54155 contact friction
+ expanding   memory to       54249 joints
+ contracting memory to       54249 accelerometers
+ expanding   memory to       54349 rigid bodies for disp. termination
+ contracting memory to       54349 transformation to move nodes
+ expanding   memory to       57485 interfac for file
+ contracting memory to       55920 thermal expansion 0
+ expanding   memory to       55923 flexible body 2
+ expanding   memory to       55946 implicit joints
+ 
+ *** Warning 30128 (INI+128)
+     Massless nodes
+     The following massless nodes were found
+        1535        1536        1537        1538        1539        1540
+        1543        1544        1545        1546        1574        1575
+ 
+ *** Warning 30131 (INI+131)
+     total number of massless nodes = 12
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to begin solution      :       409934
+ Additional dynamically allocated memory:       146097
+                                   Total:       556031
+       1 t 0.0000E+00 dt 3.74E-06 flush i/o buffers            10/24/21 14:46:57
+       1 t 0.0000E+00 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     108 t 3.9986E-04 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     215 t 7.9973E-04 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     322 t 1.1996E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     429 t 1.5995E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     536 t 1.9993E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     643 t 2.3992E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     750 t 2.7990E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     857 t 3.1989E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+     964 t 3.5988E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1071 t 3.9986E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1178 t 4.3985E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1285 t 4.7984E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1392 t 5.1982E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1499 t 5.5981E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1606 t 5.9979E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1713 t 6.3978E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1820 t 6.7977E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    1927 t 7.1975E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2034 t 7.5974E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2141 t 7.9973E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2248 t 8.3971E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2355 t 8.7970E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2462 t 9.1968E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2569 t 9.5967E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2676 t 9.9966E-03 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2783 t 1.0396E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2890 t 1.0796E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    2998 t 1.1200E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3105 t 1.1600E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3212 t 1.2000E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3319 t 1.2399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3426 t 1.2799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3533 t 1.3199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3640 t 1.3599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3747 t 1.3999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3854 t 1.4399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    3961 t 1.4799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4068 t 1.5199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4175 t 1.5598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4282 t 1.5998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4389 t 1.6398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4496 t 1.6798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4603 t 1.7198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4710 t 1.7598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4817 t 1.7998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:57
+    4924 t 1.8397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5000 t 1.8681E-02 dt 3.74E-06 flush i/o buffers            10/24/21 14:46:58
+    5031 t 1.8797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5138 t 1.9197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5245 t 1.9597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5352 t 1.9997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5459 t 2.0397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5566 t 2.0797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5673 t 2.1196E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5780 t 2.1596E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5888 t 2.2000E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    5995 t 2.2400E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6102 t 2.2800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6209 t 2.3200E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6316 t 2.3599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6423 t 2.3999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6530 t 2.4399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6637 t 2.4799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6744 t 2.5199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6851 t 2.5599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    6958 t 2.5999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7065 t 2.6398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7172 t 2.6798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7279 t 2.7198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7386 t 2.7598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7493 t 2.7998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7600 t 2.8398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7707 t 2.8798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7814 t 2.9197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    7921 t 2.9597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8028 t 2.9997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8135 t 3.0397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8242 t 3.0797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8349 t 3.1197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8456 t 3.1597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8563 t 3.1997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8670 t 3.2396E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8778 t 3.2800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8885 t 3.3200E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    8992 t 3.3600E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9099 t 3.4000E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9206 t 3.4399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9313 t 3.4799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9420 t 3.5199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9527 t 3.5599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9634 t 3.5999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9741 t 3.6399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9848 t 3.6799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+    9955 t 3.7198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10000 t 3.7367E-02 dt 3.74E-06 flush i/o buffers            10/24/21 14:46:58
+   10062 t 3.7598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10169 t 3.7998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10276 t 3.8398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10383 t 3.8798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10490 t 3.9198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10597 t 3.9598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10704 t 3.9997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10811 t 4.0397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   10918 t 4.0797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11025 t 4.1197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11132 t 4.1597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11239 t 4.1997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11346 t 4.2397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11453 t 4.2797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11560 t 4.3196E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11667 t 4.3596E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11775 t 4.4000E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11882 t 4.4400E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   11989 t 4.4800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12096 t 4.5199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12203 t 4.5599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12310 t 4.5999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12417 t 4.6399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12524 t 4.6799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12631 t 4.7199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12738 t 4.7599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12845 t 4.7998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   12952 t 4.8398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13059 t 4.8798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13166 t 4.9198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13273 t 4.9598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13380 t 4.9998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13487 t 5.0398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13594 t 5.0798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13701 t 5.1197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13808 t 5.1597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   13915 t 5.1997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14022 t 5.2397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14129 t 5.2797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14236 t 5.3197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14343 t 5.3597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14450 t 5.3996E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14557 t 5.4396E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14665 t 5.4800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14772 t 5.5200E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14879 t 5.5600E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   14986 t 5.5999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15000 t 5.6052E-02 dt 3.74E-06 flush i/o buffers            10/24/21 14:46:58
+   15093 t 5.6399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15200 t 5.6799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15307 t 5.7199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15414 t 5.7599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15521 t 5.7999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15628 t 5.8399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15735 t 5.8799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15842 t 5.9198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   15949 t 5.9598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16056 t 5.9998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16163 t 6.0398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16270 t 6.0798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16377 t 6.1198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16484 t 6.1598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16591 t 6.1997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16698 t 6.2397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16805 t 6.2797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   16912 t 6.3197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17019 t 6.3597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17126 t 6.3997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17233 t 6.4397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17340 t 6.4796E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17447 t 6.5196E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17554 t 6.5596E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17662 t 6.6000E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17769 t 6.6400E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17876 t 6.6800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   17983 t 6.7199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18090 t 6.7599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18197 t 6.7999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18304 t 6.8399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18411 t 6.8799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18518 t 6.9199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18625 t 6.9599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18732 t 6.9998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18839 t 7.0398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   18946 t 7.0798E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19053 t 7.1198E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19160 t 7.1598E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19267 t 7.1998E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19374 t 7.2398E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19481 t 7.2797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19588 t 7.3197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19695 t 7.3597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19802 t 7.3997E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   19909 t 7.4397E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20000 t 7.4737E-02 dt 3.74E-06 flush i/o buffers            10/24/21 14:46:58
+   20016 t 7.4797E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20123 t 7.5197E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20230 t 7.5597E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20337 t 7.5996E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20444 t 7.6396E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20552 t 7.6800E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20659 t 7.7200E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20766 t 7.7600E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20873 t 7.7999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   20980 t 7.8399E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   21087 t 7.8799E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   21194 t 7.9199E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   21301 t 7.9599E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+   21408 t 7.9999E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+ 
+ *** termination time reached ***
+   21408 t 8.0002E-02 dt 3.74E-06 write d3dump01 file          10/24/21 14:46:58
+   21408 t 8.0002E-02 dt 3.74E-06 write d3plot file            10/24/21 14:46:58
+
+ N o r m a l    t e r m i n a t i o n                          10/24/21 14:46:58
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to complete solution   :       409934
+ Additional dynamically allocated memory:       146104
+                                   Total:       556038
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 0.0000E+00    0.00     2.0000E-02    1.97
+    KW Reading ......... 0.0000E+00    0.00     7.0000E-03    0.69
+    KW Writing ......... 0.0000E+00    0.00     6.0000E-03    0.59
+  Initialization ....... 0.0000E+00    0.00     6.5000E-02    6.42
+    Init Proc Phase 1 .. 0.0000E+00    0.00     2.2000E-02    2.17
+    Init Proc Phase 2 .. 0.0000E+00    0.00     2.0000E-03    0.20
+  Element processing ... 0.0000E+00    0.00     1.0200E-01   10.07
+    Solids ............. 0.0000E+00    0.00     8.9000E-02    8.79
+  Binary databases ..... 0.0000E+00    0.00     6.3000E-02    6.22
+  ASCII database ....... 0.0000E+00    0.00     4.0000E-03    0.39
+  Contact algorithm .... 0.0000E+00    0.00     2.0000E-03    0.20
+  Rigid Bodies ......... 0.0000E+00    0.00     1.9600E-01   19.35
+  Other ................ 1.0000E+00  100.00     5.6100E-01   55.38
+  ----------------------------------------------------------------
+  T o t a l s            1.0000E+00  100.00     1.0130E+00  100.00
+
+ Problem time       =    8.0002E-02
+ Problem cycle      =     21408
+ Total CPU time     =         1 seconds (   0 hours  0 minutes  1 seconds)
+ CPU time per zone cycle  =        40 nanoseconds
+ Clock time per zone cycle=        37 nanoseconds
+
+ Number of CPU's    1
+ NLQ used/max     136/  136
+ Start time   10/24/2021 14:46:57  
+ End time     10/24/2021 14:46:58  
+ Elapsed time       1 seconds(   0 hours  0 min.  1 sec.) for   21408 cycles
+
+ N o r m a l    t e r m i n a t i o n                          10/24/21 14:46:58

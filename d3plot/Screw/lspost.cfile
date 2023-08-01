@@ -1,0 +1,5 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.10.4-22May2023 -64bit-Window
+$# Created on Jul-27-2023 (10:45:55)
+open d3plot "C:\Users\MX01\Desktop\d3plot\Screw\d3plot"
+ac
+open d3plot "C:\Users\MX01\Desktop\d3plot\d3plot\d3plot"
