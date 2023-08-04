@@ -153,6 +153,7 @@
     <ClCompile Include="letterCombinations.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
     <ClCompile Include="maxArea.cpp" />
+    <ClCompile Include="mergeKLists.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
     <ClCompile Include="myAtoi.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
