@@ -14,39 +14,58 @@ using namespace std;
 class Solution {
 private:
 
-	//记录一次递归堆栈中的节点
-	vector<bool> onPath;
-	//记录遍历过的节点，防止走回头路
-	vector<bool> visited;
-	//记录图中是否有环
+	//记录后序遍历结果
+	vector<int> postorder;
+	//记录是否存在环
 	bool hasCycle = false;
+	vector<bool> visited, onPath;
 
 public:
-	bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+	//主函数
+	vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+
 		vector<vector<int>> graph = buildGraph(numCourses, prerequisites);
-		visited = vector<bool>(numCourses);
-		onPath = vector<bool>(numCourses);
+		visited = vector<bool>(numCourses, false);
+		onPath = vector<bool>(numCourses, false);
+
+		//开始遍历图
 		for (int i = 0; i < numCourses; i++) {
 			traverse(graph, i);
+
 		}
-		return !hasCycle;
+		//有环图无法进行拓扑排序
+		if (hasCycle) {
+			return {};
+		}
+		//逆后序遍历结果即为拓扑排序结果
+		reverse(postorder.begin(), postorder.end());
+		vector<int> res(numCourses);
+		for (int i = 0; i < numCourses; i++) {
+			res[i] = postorder[i];
+		}
+		return res;
 	}
+	//图遍历函数
 	void traverse(vector<vector<int>> &graph, int s) {
 		if (onPath[s]) {
+			//发现环
 			hasCycle = true;
 		}
 		if (visited[s] || hasCycle) {
 			return;
 		}
-		//前序代码位置
-		visited[s] = true;
+		
+		//前序遍历位置
 		onPath[s] = true;
+		visited[s] = true;
 		for (int t : graph[s]) {
 			traverse(graph, t);
 		}
-		//后序代码位置
+		//后序遍历位置
+		postorder.push_back(s);
 		onPath[s] = false;
 	}
+
 	vector<vector<int>> buildGraph(int numCourses, vector<vector<int>> &prerequisites) {
 		vector<vector<int>> res(numCourses);
 		for (int i = 0; i < numCourses; i++) {

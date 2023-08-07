@@ -35,11 +35,11 @@ public:
 		}
 	}
 };
-int main() {
-	Solution s;
-	auto res = s.letterCombinations("23");
-	for (auto str : res) {
-		cout << str << " ";
-	}
-	return 0;
-}
+//int main() {
+//	Solution s;
+//	auto res = s.letterCombinations("23");
+//	for (auto str : res) {
+//		cout << str << " ";
+//	}
+//	return 0;
+//}
