@@ -156,6 +156,7 @@
     <ClCompile Include="letterCombinations.cpp" />
     <ClCompile Include="luckyNumbers.cpp" />
     <ClCompile Include="maxArea.cpp" />
+    <ClCompile Include="maxProfit.cpp" />
     <ClCompile Include="mergeKLists.cpp" />
     <ClCompile Include="minDistance.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
