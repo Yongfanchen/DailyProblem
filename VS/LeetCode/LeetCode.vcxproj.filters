@@ -138,6 +138,24 @@
     <ClCompile Include="fourSum.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="coinChange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="minDistance.cpp">
+      <Filter>源文件\头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canFinish.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findOrder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="permute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="solveNQueens.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

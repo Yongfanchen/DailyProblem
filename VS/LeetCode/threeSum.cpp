@@ -30,7 +30,7 @@ public:
 	}
 };
 
-class Solution {
+class Solution1 {
 public:
 	vector<vector<int>> threeSum(vector<int>& nums) {
 		int n = nums.size();
@@ -79,7 +79,7 @@ public:
 #include <set>
 #include <array>
 using namespace std;
-class Solution {
+class Solution12 {
 public:
 	vector<vector<int>> threeSum(vector<int>& nums) {
 		int n = nums.size();
