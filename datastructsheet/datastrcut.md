@@ -251,7 +251,7 @@ for 状态1 in 状态1的所有取值：
 
 状态机是什么？
 
-![状态机](D:\Dailyproblem\DailyProblem\datastructsheet\iamge\shareproblem.png)
+![状态机](iamge/shareproblem.png)
 
 那么转移方程为
 
