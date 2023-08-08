@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="allCellsDistOrder.cpp" />
+    <ClCompile Include="allPathsSourceTarget.cpp" />
     <ClCompile Include="averageOfLevels.cpp" />
     <ClCompile Include="canFinish.cpp" />
     <ClCompile Include="canPlaceFlowers.cpp" />
