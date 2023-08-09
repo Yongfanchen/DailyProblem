@@ -2,7 +2,7 @@
 
 ## 1.链表、数组
 
-
+---
 
 ## 2.二叉树
 
@@ -14,7 +14,7 @@ void sort(int nums[], int lo, int hi){
     //通过交换元素构建分解点
     int p = paritition(nums, lo, hi);
     /*****************/
-    
+
     sort(nums, lo, p - 1);
     sort(nums, p + 1, hi);
 }
@@ -105,8 +105,6 @@ void traverse(ListNode* head) {
 }
 ```
 
-
-
 ![树的遍历](binarytree.jpeg)
 
 ### 6.多叉树的遍历
@@ -123,7 +121,33 @@ void traverse(TreeNode* root) {
 }
 ```
 
+### 7.二叉树的层序遍历
 
+```c++
+//输入一颗二叉树的根节点，层序遍历这颗二叉树
+void leverTraverse (TreeNode* root) {
+    if (root == nullprt) return;
+    queue<TreeNode*> q;
+    q.push(root);
+
+    //从上到下遍历二叉树的每一层
+    while (!q.empty()) {
+        int sz = q.size();
+        //从左到右遍历每一层的每个节点
+        for (int i = 0; i < sz; i++) {
+            TreeNode* cur = q.front();
+            q.pop();
+            //将下一层节点放入队列
+            if (cur->left != nullptr) {
+                q.push(cur->left);
+            }
+            if (cur->right != nullptr) {
+                q.push(cur->right);
+            }
+        }
+    }
+}
+```
 
 ## 3.图
 
@@ -141,7 +165,7 @@ class TreeNode {
 public:
     int val;
     vector<TreeNode*> children;
-    	
+
 }
 
 //邻接表
@@ -193,7 +217,7 @@ void traverse(Graph graph, int s) {
     //经过节点s，标记为已遍历
     visited[s] = true;
     //做选择；标记节点s在路径上
-    
+
     onPath[s] = true;
     for(int neighbor : graph.neighnor(s)) {
         traverse(graph, neighbor);
@@ -203,7 +227,7 @@ void traverse(Graph graph, int s) {
 }
 ```
 
-### 4.回溯算法和DFS的区别
+### 4.回溯算法和$DFS$的区别
 
 ```c++
 //DFS 算法，关注点在节点
@@ -230,7 +254,146 @@ void backtrack(TreeNode* root) {
 
 ```
 
+### 5.环检测算法与拓扑排序
 
+
+
+### 6.$DFS$的遍历框架
+
+```c++
+//防止重复遍历同一个节点
+vector<bool> visited;
+//从节点s开始DFS遍历，将遍历过的节点标记为true
+void traverse (vector<int>* graph, int s) {
+    if (visited[s]) {
+        return;
+    }
+
+    /*前序遍历代码位置*/
+    //将当前节点标记为已遍历
+    visited[s] = true;
+    for (int t : graph[s]) {
+        traverse(graph, t);
+    }
+    /*后序遍历位置*/
+}
+```
+
+### 7.$BFS$的遍历框架：
+
+$BFS$的问题本质：就是让你在一幅图中，找到从起点 start 到 target 的最近距离，听起来很枯燥，但是$BFS$就是干这个事。
+
+```c++
+int BFS (Node start, Node target) {
+    queue<Node> q;
+    set<Node> visited;
+
+    q.push(start);
+
+    while (!q.empty()) {
+        int sz = q.size();
+        for (int i = 0; i < sz; i++) {
+            Node cur = q.front();
+            q.pop();
+            if (cur == target)
+                return step;
+            for (Node x : cur.adj()) {
+                if (visited.count(x) == 0) {
+                    q.push(x);
+                    visited.insert(x);
+                }
+            }
+        }
+    }
+    //如果走到这，说明在图中没有找到目标节点
+}
+```
+
+密码锁问题
+
+首先算法题不能一蹴而就，需要慢慢来,先将框架写好然后再在框架上面补充。
+
+```c++
+void BFS(string target) {
+    queue<string> q;
+    q.push("0000");
+    while (!q.empty()) {
+        int sz = q.size();
+        /*将当前队列中的所有节点向周围扩散*/
+        for (int i = 0; i < sz; i++) {
+            string cur = q.front();
+            q.pop();
+            /*判断是否到达终点*/
+            cout << cur << endl;
+            
+            /*将每一个节点的相邻节点加入队列*/
+            for	(int j = 0; j < 4; j++) {
+                string up = plusOne(cur, j);
+                string down = minusOne(cur, j);
+                q.push(up);
+                q.push(down);
+            }
+        }
+        /*这里增加步数*/
+    }
+    return;
+}
+```
+
+
+
+```c++
+// 注意：cpp 代码由 chatGPT🤖 根据我的 java 代码翻译，旨在帮助不同背景的读者理解算法逻辑。
+// 本代码还未经过力扣测试，仅供参考，如有疑惑，可以参照我写的 java 代码对比查看。
+
+int openLock(vector<string>& deadends, string target) {
+    // 记录需要跳过的死亡密码
+    unordered_set<string> deads;
+    for (string s : deadends) {
+        deads.insert(s);
+    }
+    // 记录已经穷举过的密码，防止走回头路
+    unordered_set<string> visited;
+    queue<string> q;
+    // 从起点开始启动广度优先搜索
+    int step = 0;
+    q.push("0000");
+    visited.insert("0000");
+
+    while (!q.empty()) {
+        int sz = q.size();
+        /* 将当前队列中的所有节点向周围扩散 */
+        for (int i = 0; i < sz; i++) {
+            string cur = q.front();
+            q.pop();
+
+            /* 判断是否到达终点 */
+            if (deads.count(cur))
+                continue;
+            if (cur == target)
+                return step;
+
+            /* 将一个节点的未遍历相邻节点加入队列 */
+            for (int j = 0; j < 4; j++) {
+                string up = plusOne(cur, j);
+                if (!visited.count(up)) {
+                    q.push(up);
+                    visited.insert(up);
+                }
+                string down = minusOne(cur, j);
+                if (!visited.count(down)) {
+                    q.push(down);
+                    visited.insert(down);
+                }
+            }
+        }
+        /* 在这里增加步数 */
+        step++;
+    }
+    // 如果穷举完都没找到目标密码，那就是找不到了
+    return -1;
+}
+```
 
 ## 4.回溯算法
 
@@ -248,7 +411,7 @@ def backtrack(路径, 选择列表):
     if 满足结束条件:
         result.add(路径)
         return
-    
+
     for 选择 in 选择列表:
         做选择
         backtrack(路径, 选择列表)
@@ -256,7 +419,7 @@ def backtrack(路径, 选择列表):
 
 ```
 
-核心就是for循环里面的递归，在递归调用前做选择，在递归调用之后撤销选择。
+核心就是 for 循环里面的递归，在递归调用前做选择，在递归调用之后撤销选择。
 
 多叉树的遍历框架：
 
@@ -292,7 +455,7 @@ def backtrack(...)
         撤销选择
 ```
 
-n皇后问题在判断时是否存在皇后时
+n 皇后问题在判断时是否存在皇后时
 
 ```c++
 bool isValid (vector<string> &board, int row, int col) {
@@ -305,16 +468,14 @@ bool isValid (vector<string> &board, int row, int col) {
     }
     //2.如何检查右上方是否有皇后冲突
     for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) {
-        
+
     }
     //3.然后检查左上方是否有皇后冲突
     for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
-        
+
     }
 }
 ```
-
-
 
 ## 5.动态规划
 
@@ -326,9 +487,7 @@ bool isValid (vector<string> &board, int row, int col) {
 
 3.存在“重叠子问题”
 
-明确base case->明确“状态”->明确“选择”->定义 DP 数组/函数的含义。
-
-
+明确 base case->明确“状态”->明确“选择”->定义 DP 数组/函数的含义。
 
 ```python
 #自顶向下递归的动态规划
@@ -347,10 +506,8 @@ for 状态1 in 状态1的所有取值：
 	for 状态2 in 状态2的所有取值：
     	for ...
         	dp[状态1][状态2][...] = 求最值(选择1， 选择2 ...)
-    
+
 ```
-
-
 
 ## 6.股票问题
 
@@ -367,20 +524,20 @@ dp[i][k][0] = max(dp[i-1][k][0],dp[i-1][k][1] + prices[i])
 
 解释：今天我没有持有股票，有两种可能，我从这两种可能中求最大利润
 
-1，我昨天没有持有股票，且截止昨天最大交易次数限制为k；然后我们今天选择rest，所以我今天还是没有持有，最大交易次数限制还是为k；
+1，我昨天没有持有股票，且截止昨天最大交易次数限制为 k；然后我们今天选择 rest，所以我今天还是没有持有，最大交易次数限制还是为 k；
 
-2，我昨天持有股票，且截止昨天最大交易次数限制为k；但是我今天sell了，所以我今天持有股票，最大交易次数限制依然为k。
+2，我昨天持有股票，且截止昨天最大交易次数限制为 k；但是我今天 sell 了，所以我今天持有股票，最大交易次数限制依然为 k。
 
 ```c++
 dp[i][k][1] = max(dp[i-1][k][1],dp[i-1][k][0] - prices[i])
     		  max(今年选择 rest,  今天选择buy)
 ```
 
-解释：我今天持有股票，最大交易次数限制为k，那么对昨天来说，有两种可能，我从这两种可能求最大利润：
+解释：我今天持有股票，最大交易次数限制为 k，那么对昨天来说，有两种可能，我从这两种可能求最大利润：
 
-1，我昨天就持有股票，最大交易次数限制为k，然后今天选择rest，所以我今天还是持有这股票，最大交易次数限制依然为k。
+1，我昨天就持有股票，最大交易次数限制为 k，然后今天选择 rest，所以我今天还是持有这股票，最大交易次数限制依然为 k。
 
-2，我状态没有股票，且截止昨天最大交易次数限制为k - 1 ；但今天我选择buy，所以今天我就持有股票了，最大交易次数限制为l。
+2，我状态没有股票，且截止昨天最大交易次数限制为 k - 1 ；但今天我选择 buy，所以今天我就持有股票了，最大交易次数限制为 l。
 
 结果是
 
@@ -388,7 +545,7 @@ dp[i][k][1] = max(dp[i-1][k][1],dp[i-1][k][0] - prices[i])
 dp[n-1][k][0]  //将股票卖出去，并且最大限制交易次数为k
 ```
 
-状态转移方程已经确定，接下来确定的是，定义base case，就是最简单的情况，然后开始。
+状态转移方程已经确定，接下来确定的是，定义 base case，就是最简单的情况，然后开始。
 
 ```c++
 dp[-1][...][0] = 0
@@ -418,6 +575,8 @@ dp[-1][...][1] = dp[...][0][1] = INT_MIN;
 //状态转移方程
 dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
 dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
-    
+
 ```
+
+
 

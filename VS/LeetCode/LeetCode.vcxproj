@@ -159,16 +159,19 @@
     <ClCompile Include="maxArea.cpp" />
     <ClCompile Include="maxProfit.cpp" />
     <ClCompile Include="mergeKLists.cpp" />
+    <ClCompile Include="minDepth.cpp" />
     <ClCompile Include="minDistance.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
     <ClCompile Include="myAtoi.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
     <ClCompile Include="numSpecial.cpp" />
     <ClCompile Include="oddCells.cpp" />
+    <ClCompile Include="openLock.cpp" />
     <ClCompile Include="permute.cpp" />
     <ClCompile Include="reverse.cpp" />
     <ClCompile Include="rowAndMaximumOnes.cpp" />
     <ClCompile Include="shortestCompletingWord.cpp" />
+    <ClCompile Include="slidingPuzzle.cpp" />
     <ClCompile Include="solveNQueens.cpp" />
     <ClCompile Include="threeSum.cpp" />
     <ClCompile Include="threeSumClosest.cpp" />
@@ -176,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="datastruct.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc" />

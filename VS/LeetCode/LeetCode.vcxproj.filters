@@ -165,9 +165,21 @@
     <ClCompile Include="allPathsSourceTarget.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="minDepth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="openLock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="slidingPuzzle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="datastruct.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

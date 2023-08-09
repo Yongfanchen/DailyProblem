@@ -54,7 +54,7 @@ public:
 		if (visited[s] || hasCycle) {
 			return;
 		}
-		
+
 		//前序遍历位置
 		onPath[s] = true;
 		visited[s] = true;
@@ -76,5 +76,62 @@ public:
 			res[from].push_back(to);
 		}
 		return res;
+	}
+};
+
+//自己手撕一遍
+class Solution {
+public:
+	//记录后序遍历的结果
+	vector<int> postorder;
+	//记录是否存在环
+	bool hasCycle = false;
+	vector<bool> visited, onPath;
+
+	//主函数
+	vector<int> findOrder(int numCourses, vector<vector<int>>&prerequisites) {
+		visited = vector<bool>(numCourses);
+		onPath = vector<bool>(numCourses);
+		vector<vector<int>> graph = buildGraph(numCourses, prerequisites);
+		for (int i = 0; i < numCourses; i++) {
+			traverse(graph, i);
+		}
+		if (hasCycle) {
+			return {};
+		}
+		reverse(postorder.begin(), postorder.end());
+		return postorder;
+	}
+	void traverse(vector<vector<int>> &graph, int s) {
+		if (onPath[s]) {
+			hasCycle = true;
+		}
+
+		if (visited[s] || hasCycle) {
+			return;
+		}
+
+		//前序位置
+		onPath[s] = true;
+		visited[s] = true;
+		for (int t : graph[s]) {
+			traverse(graph, t);
+		}
+		//后序位置
+		postorder.push_back(s);
+		onPath[s] = false;
+	}
+
+	vector<vector<int>> buildGraph(int numCourses, vector<vector<int>> &prerequisites) {
+		vector<vector<int>> graph(numCourses);
+		for (int i = 0; i < numCourses; i++) {
+			graph[i] = {};
+		}
+		for (auto & pre : prerequisites) {
+			int from = pre[1];
+			int to = pre[0];
+			graph[from].push_back(to);
+		}
+		return graph;
 	}
 };
