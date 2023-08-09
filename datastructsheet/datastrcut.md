@@ -127,6 +127,111 @@ void traverse(TreeNode* root) {
 
 ## 3.图
 
+### 1，图的逻辑结构
+
+```c++
+/*图节点的逻辑结构*/
+class Vertex{
+    int id;
+    vector<Vertex*> neighbors;
+};
+
+/*基本的N叉树节点*/
+class TreeNode {
+public:
+    int val;
+    vector<TreeNode*> children;
+    	
+}
+
+//邻接表
+//graph[x] 存储x的所有邻居节点
+vector<int> graph[];
+
+//邻接矩阵
+//matrix[x][y] 记录x是否有一条指向y的边
+bool matrix[][];
+
+//记住是邻接表使用的更频繁
+
+
+//加权有向图
+//邻接表
+//graph[x] 存储x的所以邻居节点以及对应的权重
+vector<pari<int,int>> graph[];
+
+//邻接矩阵
+//matrix[x][y] 记录x指向y的边的权重，0表示不相邻
+vector<vector<int>> matrix;
+```
+
+### 2,多叉树的遍历框架
+
+```c++
+/*多叉树的遍历框架*/
+void traverse(TreeNode* root) {
+    if (root == nullptr) return;
+    //前序位置
+    for(TreeNode* child : root->children) {
+        traverse(child);
+    }
+}
+```
+
+### 3,图的遍历框架
+
+```c++
+//记录被遍历的过的节点
+vector<bool> visited;
+
+//记录从起点到到当前节点的路径
+vector<bool> onPath;
+
+/*图遍历框架*/
+void traverse(Graph graph, int s) {
+    if (visited[s]) return;
+    //经过节点s，标记为已遍历
+    visited[s] = true;
+    //做选择；标记节点s在路径上
+    
+    onPath[s] = true;
+    for(int neighbor : graph.neighnor(s)) {
+        traverse(graph, neighbor);
+    }
+    //撤销选择：节点s离开路径
+    onPath[s] = false;
+}
+```
+
+### 4.回溯算法和DFS的区别
+
+```c++
+//DFS 算法，关注点在节点
+void traverse(TreeNode* root) {
+    if(root == nullptr) return;
+    printf("进入节点 %s", root);
+    for (TreeNode* child : root->children) {
+        traverse(child);
+    }
+    printf("离开节点 %s", root);
+}
+
+//回溯算法 关注点在树枝
+void backtrack(TreeNode* root) {
+    if (root == nullptr) return;
+    for (TreeNode* child : root->children) {
+        //做选择
+        prinft("从 %s 到 %s", root, child);
+        backtrack(child);
+        //撤销选择
+        printf("从 %s 到 %s", child, root);
+    }
+}
+
+```
+
+
+
 ## 4.回溯算法
 
 回溯算法的框架，是一个决策树的遍历过程。需要解决三个问题。

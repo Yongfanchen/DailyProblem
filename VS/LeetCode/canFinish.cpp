@@ -11,7 +11,7 @@
 #include <cmath>
 #include <map>
 using namespace std;
-class Solution {
+class Solution1 {
 private:
 
 	//记录一次递归堆栈中的节点
@@ -58,4 +58,55 @@ public:
 		}
 		return res;
 	}
+};
+
+//手撕一遍 环检测算法
+class Solution {
+private:
+	bool hasCycle = false;
+	vector<bool> onPath;
+	vector<bool> visited;
+public:
+	bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+		vector<vector<int>> graph = buildgraph(numCourses, prerequisites);
+		onPath = vector<bool>(numCourses, false);
+		visited = vector<bool>(numCourses, false);
+		for (int i = 0; i < numCourses; i++) {
+			traverse(i, graph);
+		}
+		return !hasCycle;
+	}
+	void traverse(int s, vector<vector<int>>& graph) {
+		if (onPath[s]) {
+			hasCycle = true;
+		}
+		if (visited[s] || hasCycle) {
+			return;
+		}
+
+		visited[s] = true;
+		onPath[s] = true;
+		for (int i : graph[s]) {
+			traverse(i, graph);
+		}
+		//visited[s] = false;
+		//这里只需要 onPath[s] = false; why？
+
+		onPath[s] = false;
+	}
+	//建图算法
+	vector<vector<int>> buildgraph(int numCourses, vector<vector<int>> &prerequisites) {
+
+		vector<vector<int>> graph(numCourses);
+		for (int i = 0; i < numCourses; i++) {
+			graph[i] = {};
+		}
+		for (auto & prerequisite : prerequisites) {
+			int from = prerequisite[1];
+			int to = prerequisite[0];
+			graph[from].push_back(to);
+		}
+		return graph;
+	}
+
 };
