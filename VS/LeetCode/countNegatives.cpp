@@ -16,8 +16,8 @@ public:
 		int sum = 0;
 		int m = grid.size();
 		int n = grid[0].size();
-		for (size_t i = 0; i < m; i++) {
-			for (size_t j = 0; j < n; j++) {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
 				int temp = grid[i][j];
 				if (grid[i][j] < 0) {
 					sum += n - j;

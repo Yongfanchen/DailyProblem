@@ -11,7 +11,7 @@
 #include <cmath>
 #include <map>
 using namespace std;
-class Solution {
+class Solution1 {
 private:
 
 	//记录后序遍历结果

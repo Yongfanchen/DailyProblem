@@ -16,8 +16,8 @@ public:
 		int m = mat.size();
 		int sum = 0;
 		//int n = mat[0].size();
-		for (size_t i = 0; i < m; i++) {
-			for (size_t j = 0; j < m; j++) {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < m; j++) {
 				if (i == j || j + i == m - 1)
 					sum += mat[i][j];
 			}

@@ -17,8 +17,8 @@ public:
 		int m = grid[0].size();
 		if (m != n)
 			return false;
-		for (size_t i = 0; i < n; i++) {
-			for (size_t j = 0; j < n; j++) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
 				int temp = grid[i][j];
 				if (i == j) {
 					int temp = grid[i][j];

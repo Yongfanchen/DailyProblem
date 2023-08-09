@@ -258,7 +258,7 @@ void backtrack(TreeNode* root) {
 
 
 
-### 6.$DFS$的遍历框架
+### 6. $DFS$的遍历框架
 
 ```c++
 //防止重复遍历同一个节点
@@ -279,7 +279,7 @@ void traverse (vector<int>* graph, int s) {
 }
 ```
 
-### 7.$BFS$的遍历框架：
+### 7. $BFS$的遍历框架：
 
 $BFS$的问题本质：就是让你在一幅图中，找到从起点 start 到 target 的最近距离，听起来很枯燥，但是$BFS$就是干这个事。
 
@@ -312,6 +312,8 @@ int BFS (Node start, Node target) {
 密码锁问题
 
 首先算法题不能一蹴而就，需要慢慢来,先将框架写好然后再在框架上面补充。
+
+这是框架。
 
 ```c++
 void BFS(string target) {
@@ -576,6 +578,26 @@ dp[-1][...][1] = dp[...][0][1] = INT_MIN;
 dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
 dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
 
+```
+
+
+
+## 7.滑动窗口框架
+
+```c++
+int left = 0, left = 0;
+
+while (left < right && right < s.size()) {
+    //增大窗口
+    window.add(s[right]);
+    right++;
+    
+    while (window needs shrink) {
+        //缩小窗口
+        window.remove(s[left]);
+        left++;
+    }
+}
 ```
 
 

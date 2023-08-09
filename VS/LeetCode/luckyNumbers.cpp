@@ -16,10 +16,10 @@ public:
 		vector<int> res;
 		int m = matrix.size();
 		int n = matrix[0].size();
-		for (size_t i = 0; i < m; i++) {
+		for (int i = 0; i < m; i++) {
 			int min = INT_MAX;
 			int clow;
-			for (size_t j = 0; j < n; j++) {
+			for (int j = 0; j < n; j++) {
 				int temp = matrix[i][j];
 				if (matrix[i][j] < min) {
 					min = matrix[i][j];
@@ -27,7 +27,7 @@ public:
 				}
 			}
 			int max = INT_MIN;
-			for (size_t j = 0; j < m; j++) {
+			for (int j = 0; j < m; j++) {
 				int temp = matrix[j][clow];
 				if (matrix[j][clow] > max) {
 					max = matrix[j][clow];

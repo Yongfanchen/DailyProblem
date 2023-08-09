@@ -162,6 +162,7 @@
     <ClCompile Include="minDepth.cpp" />
     <ClCompile Include="minDistance.cpp" />
     <ClCompile Include="minimumSwitchingTimes.cpp" />
+    <ClCompile Include="minWindow.cpp" />
     <ClCompile Include="myAtoi.cpp" />
     <ClCompile Include="MyHashMap.cpp" />
     <ClCompile Include="numSpecial.cpp" />
